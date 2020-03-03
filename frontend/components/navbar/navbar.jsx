@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Route } from "react-router-dom";
 
-export const Greeting = ({currentUser, logout}) => {
+export const NavBar = ({currentUser, logout}) => {
     const display = currentUser ? (
             <div>
-                <p>Hi, {currentUser.username}</p>
+                <p>Account</p>
                 <button onClick={logout}>Logout</button>
             </div>
         ) : (
@@ -17,7 +18,6 @@ export const Greeting = ({currentUser, logout}) => {
 
     return (
         <div>
-            <h1>CopX</h1>
             <div>
                 {display}
             </div>
