@@ -1,4 +1,8 @@
 import React from "react"
+import {Link} from "react-router-dom"
+import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 class LoginForm extends React.Component {
@@ -33,19 +37,43 @@ class LoginForm extends React.Component {
     render(){
         const er = this.props.errors
         return(
-            <div>
-                <h2>Log In</h2>
-                <h3>{er}</h3>
-                <form>
-                    <label>Email:
-                        <input type="text" value={this.state.email} onChange={this.handleInput('email')}/>
-                    </label>
-                    <label>Password:
-                        <input type="password" value={this.state.password} onChange={this.handleInput('password')}/>
-                    </label>
-                    <button onClick={this.handleSubmit}>Submit</button>
-                    <button onClick={this.handleDemo}>Demo User</button>
-                </form>
+            <div className="session-form">
+                <div className="sessionform-header">
+                    <Link to="/" className="picture-link">
+                        <img src="/assets/coplogo.png" alt="copx-logo" id="sessionform-coplogo"/>
+                    </Link>
+                </div>
+                
+                <div className="sessionform-body">
+                    <div className="form-square">
+                        <div className="form-links">
+                            <button>
+                                <Link to="/signup" id="no-underline">Sign Up</Link>
+                            </button> 
+                            <button id="border-dark">
+                                <Link to="/login" id="no-underline-selected">Log In</Link>
+                            </button>
+                        </div>
+                        <form className="form-submits">
+                            <div className="form-socialmedialink">
+                                <button>
+                                    <FontAwesomeIcon icon={faTwitter} style={{ color: 'white' }}/>
+                                    <a href="http://www.twitter.com" id="no-underline-social">Log In With Twitter</a>
+                                </button>
+                                <button>
+                                    <FontAwesomeIcon icon={faFacebook} style={{ color: 'white' }}/>
+                                    <a href="http://www.facebook.com" id="no-underline-social">Log In With Facebook</a>
+                                </button>
+                            </div>
+                            <h3 className='or-line'>OR</h3>
+                            <input type="text" value={this.state.email} placeholder="Email" onChange={this.handleInput('email')}/>
+                            <input type="password" value={this.state.password} placeholder="Password" onChange={this.handleInput('password')}/>
+                            <p>{er}</p>
+                            <button onClick={this.handleSubmit}>Submit</button>
+                            <button onClick={this.handleDemo}>Demo User</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -4,6 +4,7 @@ const noErrors = []
 
 export const sessionErrorsReducer = (state = [], action) => {
     Object.freeze(state);
+    debugger
     switch (action.type) {
         case RECEIVE_ERRORS:
             return action.errors

@@ -6,14 +6,12 @@ import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_utils"
 
 const App = () => (
-  <div>
-    <Switch>
-        <AuthRoute exact path="/signup" component={SignupformContainer}/>
-        <AuthRoute exact path="/login" component={LoginformContainer}/>
-        <Route path="/" component={HomepageContainer}/>
-    </Switch>
+  <Switch>
+      <AuthRoute exact path="/signup" component={SignupformContainer}/>
+      <AuthRoute exact path="/login" component={LoginformContainer}/>
+      <Route path="/" component={HomepageContainer}/>
+  </Switch>
     
-  </div>
 );
 
 export default App;

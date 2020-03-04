@@ -1,0 +1,188 @@
+.sessionform-header{
+    position: fixed;
+    float: top;
+    width: 100%;
+    height: 85px;
+    max-height: fit-content;
+    background-color: #ffffff;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    border-bottom: rgb(238, 237, 237) 1px solid;
+}
+
+.picture-link{
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 80%;
+}
+
+.sessionform-body{
+    background-color: rgb(248, 248, 248);
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 50px;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input{
+    height: 50px;
+}
+
+.form-square {
+    width: 380px;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 16px;
+    border: #e0e0e0 1px solid;
+    border-radius: 5px;
+}
+
+.form-links{
+    width: 100%;
+}
+
+#no-underline{
+    text-decoration: none;
+    color: #616161;
+}
+
+#no-underline-selected{
+    text-decoration: none;
+    color: black;
+}
+
+#no-underline-social{
+    text-decoration: none;
+    color: white;
+}
+
+.form-links button{
+    width: 50%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #e0e0e0;
+    font-family: 'proxima-nova', sans-serif;
+    color: #616161;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px;
+    background: #fff;
+}
+
+#border-dark{
+    border-bottom: 2px solid black;
+}
+
+
+
+.form-socialmedialink{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-socialmedialink button{
+    border-radius: 2px;
+    border-width: 0 0 1px;
+    font: 700 22px BebasNeue;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-socialmedialink button:first-child{
+    background-color: #2ba9e1;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 16px;
+}
+
+.form-socialmedialink button:last-child{
+    background-color: #3b5998;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 16px;
+}
+
+.form-submits{
+    margin-top: 15px;
+    margin-bottom: 10px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+h3{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    margin: 10px auto;
+    line-height: 1em;
+    color: #e0e0e0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.or-line:before, .or-line:after{
+    content: '';
+    flex-grow: 1;
+    margin: 0px 4px;
+    background: linear-gradient(to right,#e0e0e0, #e0e0e0);
+    background-size: 100% 2px;
+    background-position: 0% 50%;
+    background-repeat: repeat-x;
+}
+
+.form-submits input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-submits button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    height: 50px;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    background: #509e2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+
+
+
