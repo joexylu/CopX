@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Homepage from './homepage'
 
 const mapStateToProps = state => {
-    page: "page"
 };
 
 const mapDispatchProps = (dispatch) => ({

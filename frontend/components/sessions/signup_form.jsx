@@ -27,6 +27,10 @@ class SignupForm extends React.Component {
         this.props.processForm(user)//.then(this.props.history.push("/"))
     }
 
+    componentDidMount(){
+        this.props.clearErrors()
+    }
+
     render(){
         const er = this.props.errors
         return(
@@ -51,11 +55,11 @@ class SignupForm extends React.Component {
                             <div className="form-socialmedialink">
                                 <button>
                                     <FontAwesomeIcon icon={faTwitter} style={{ color: 'white' }}/>
-                                    <a href="http://www.twitter.com" id="no-underline-social">Log In With Twitter</a>
+                                    <a href="http://www.twitter.com" id="no-underline-social">Sign Up With Twitter</a>
                                 </button>
                                 <button>
                                     <FontAwesomeIcon icon={faFacebook} style={{ color: 'white' }}/>
-                                    <a href="http://www.facebook.com" id="no-underline-social">Log In With Facebook</a>
+                                    <a href="http://www.facebook.com" id="no-underline-social">Sign Up With Facebook</a>
                                 </button>
                             </div>
                             <h3 className='or-line'>OR</h3>

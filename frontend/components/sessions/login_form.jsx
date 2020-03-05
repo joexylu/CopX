@@ -33,6 +33,9 @@ class LoginForm extends React.Component {
         const user = {email: "beno@123.com", password: "123456"}
         this.props.processForm(user)
     }
+    componentDidMount(){
+        this.props.clearErrors()
+    }
 
     render(){
         const er = this.props.errors

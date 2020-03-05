@@ -8,7 +8,7 @@
     display: flex;
     padding-top: 10px;
     justify-content: center;
-    border-bottom: rgb(238, 237, 237) 1px solid;
+    border-bottom: #e0e0e0 1px solid;
 }
 
 .picture-link{
@@ -149,14 +149,15 @@ h3{
     width: 100%;
     margin: 10px auto;
     line-height: 1em;
-    color: #e0e0e0;
+    color: #afafaf;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
 }
 .or-line:before, .or-line:after{
     content: '';
     flex-grow: 1;
     margin: 0px 4px;
-    background: linear-gradient(to right,#e0e0e0, #e0e0e0);
+    background: linear-gradient(to right,#afafaf, #afafaf);
     background-size: 100% 2px;
     background-position: 0% 50%;
     background-repeat: repeat-x;
@@ -180,6 +181,33 @@ h3{
     border: none;
     border-radius: 4px;
     text-align: center;
+}
+
+input::placeholder{
+    color: #7a7a7a;  
+}
+
+input[type=text]{
+    width: 100%;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type=password]{
+    width: 100%;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 1px solid black;
+}
+input[type=password]:focus {
+    border: 1px solid black;
 }
 
 
