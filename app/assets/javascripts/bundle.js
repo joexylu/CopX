@@ -252,7 +252,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "homepage-nav-bar-logo-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/coplogo.png",
+        src: window.coplogoURL,
         alt: "copx-logo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links"
@@ -261,7 +261,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-aj6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/homepage-aj6.jpeg",
+        src: window.aj6URL,
         alt: "copx-logo",
         id: "aj6-pic"
       }))));
@@ -547,7 +547,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "picture-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/coplogo.png",
+        src: window.coplogoURL,
         alt: "copx-logo",
         id: "sessionform-coplogo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -632,8 +632,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    errors: state.errors.session // errors: []
-
+    errors: state.errors.session
   };
 };
 
@@ -742,7 +741,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "picture-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/coplogo.png",
+        src: window.coplogoURL,
         alt: "copx-logo",
         id: "sessionform-coplogo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -830,8 +829,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    errors: state.errors.session // errors: []
-
+    errors: state.errors.session
   };
 };
 

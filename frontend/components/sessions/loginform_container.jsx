@@ -5,7 +5,6 @@ import { login, receiveErrors } from '../../actions/session_actions'
 
 const mapStateToProps = (state) => ({
     errors: state.errors.session
-    // errors: []
 })
 
 
