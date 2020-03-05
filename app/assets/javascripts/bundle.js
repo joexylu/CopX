@@ -252,19 +252,15 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "homepage-nav-bar-logo-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.coplogoURL,
-        alt: "copx-logo"
+        src: window.brentURL,
+        id: "sessionform-coplogo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-aj6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.aj6URL,
-        alt: "copx-logo",
-        id: "aj6-pic"
-      }))));
+      })));
     }
   }]);
 
@@ -547,8 +543,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "picture-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.coplogoURL,
-        alt: "copx-logo",
+        src: window.brentURL,
         id: "sessionform-coplogo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sessionform-body"
@@ -741,8 +736,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         className: "picture-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.coplogoURL,
-        alt: "copx-logo",
+        src: window.brentURL,
         id: "sessionform-coplogo"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sessionform-body"

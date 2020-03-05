@@ -44,7 +44,8 @@ class LoginForm extends React.Component {
             <div className="session-form">
                 <div className="sessionform-header">
                     <Link to="/" className="picture-link">
-                        <img src={window.coplogoURL} alt="copx-logo" id="sessionform-coplogo"/>
+                        {/* <img src={images.coplogoURL} alt="copx-logo" id="sessionform-coplogo"/> */}
+                        <img src={window.brentURL} id="sessionform-coplogo"/>
                     </Link>
                 </div>
                 
