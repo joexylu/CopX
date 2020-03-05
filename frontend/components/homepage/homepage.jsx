@@ -13,7 +13,7 @@ class Homepage extends React.Component{
                 <nav className="homepage-nav-bar">
                     <div className="homepage-nav-bar-logo">
                         <Link to="/" className="homepage-nav-bar-logo-link">
-                            <img src={window.brentURL} id="sessionform-coplogo"/>
+                            {/* <img src={window.brentURL} id="sessionform-coplogo"/> */}
                         </Link>
                     </div>
                     <div className="homepage-nav-bar-links">
