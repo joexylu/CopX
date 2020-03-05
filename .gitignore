@@ -11,6 +11,7 @@
 /log/*
 /tmp/*
 !/log/.keep
+/log/.keep
 !/tmp/.keep
 
 # Ignore uploaded files in development
@@ -22,10 +23,14 @@
 
 /public/assets
 .byebug_history
+.DS_Store
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-node_modules/
-bundle.js
+/node_modules/
+/bundle.js*
 bundle.js.map
+
+npm-debug.log
+/yarn-error.log/public/assets
