@@ -37,7 +37,6 @@ class SignupForm extends React.Component {
             <div className="session-form">
                 <div className="sessionform-header">
                     <Link to="/" className="picture-link">
-                        {/* <img src={window.images.coplogoURL} alt="copx-logo" id="sessionform-coplogo"/> */}
                         <img src={window.coplogoURL} id="sessionform-coplogo" />
                     </Link>
                 </div>
