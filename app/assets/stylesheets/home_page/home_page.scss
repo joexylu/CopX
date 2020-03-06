@@ -5,19 +5,19 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    float: top;
+    top: 0;
     max-height: fit-content;
     background-color: transparent;
     padding-top: 10px;
-
+    z-index: 999;
 }
 
 .homepage-nav-bar.scrolled{
     background-color: white;
-
 }
 
-.homepage-nav-bar.scrolled .homepage-nav-bar-links .navbar-element div a{
+.homepage-nav-bar.scrolled .homepage-nav-bar-links .navbar-element div a, 
+.homepage-nav-bar.scrolled .navbar-account-dropdown{
     color: black;
 }
 
@@ -39,4 +39,27 @@
 
 #aj6-pic{
     width: 100%;
+}
+
+.homepage-aj6{
+
+    position: relative;
+    background: url(/assets/homepageaj6.jpg);
+    z-index: 1;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    background-position: center center; 
+    height: 500px;
+    overflow: hidden;
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.homepage-aj6 h1{
+    position: absolute;
+    left: 39%;
+    top: 39%;
+    font-size: 30px;
+    color: white;
 }

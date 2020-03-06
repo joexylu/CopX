@@ -21,30 +21,30 @@ export const NavBar = ({currentUser, logout}) => {
 
     return (
         <div className="navbar-element">
-                 <div>
-                     <div>Browse</div>
-                 </div>
-                 <div>
-                    <a href="https://stockx.com/news/">News</a>
-                 </div>
-                 <div>
-                    <a href="https://stockx.com/text-me-the-app">App</a>
-                 </div>
-                 <div>
-                    <a href="https://stockx.com/portfolios">Portfolios</a>
-                 </div>
-                <div>
-                    About
-                </div>
-                <div>
-                    Help
-                </div>
-                <div>
-                    {display}
-                </div>
-                <div>
-                    Sell
-                </div>
+            <div>
+                <a href="">Browse</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/news/">News</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/text-me-the-app">App</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/portfolios">Portfolios</a>
+            </div>
+            <div>
+                <a href="">About</a>
+            </div>
+            <div>
+                <a href="">Help</a>
+            </div>
+            <div>
+                {display}
+            </div>
+            <div>
+                <a href="">Sell</a>
+            </div>
         </div>
     )
 }
