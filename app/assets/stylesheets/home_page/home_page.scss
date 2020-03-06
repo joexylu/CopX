@@ -39,6 +39,7 @@
 
 #aj6-pic{
     width: 100%;
+<<<<<<< HEAD
     position: relative;
     // background: url(/assets/homepageaj6.jpg);
     z-index: 2;
@@ -51,11 +52,29 @@
     // text-transform: uppercase;
     // letter-spacing: 2px;
 
+=======
+}
+
+.homepage-aj6{
+
+    position: relative;
+    background: url(/assets/homepageaj6.jpg);
+    z-index: 1;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    background-position: center center; 
+    height: 500px;
+    overflow: hidden;
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+>>>>>>> edbfaa7a36cb67838049eba7d1509156cfe52876
 }
 
 .homepage-aj6 h1{
     position: absolute;
     left: 39%;
+<<<<<<< HEAD
     top: 20%;
     font-size: 30px;
     color: white;
@@ -64,3 +83,9 @@
 
 
 
+=======
+    top: 39%;
+    font-size: 30px;
+    color: white;
+}
+>>>>>>> edbfaa7a36cb67838049eba7d1509156cfe52876

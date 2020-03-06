@@ -22,7 +22,11 @@ class Homepage extends React.Component{
                 </div>
                 <div className="homepage-body">
                     <div className="homepage-aj6">
+<<<<<<< HEAD
                         <img src={window.aj6URL} id="aj6-pic"/>
+=======
+                        {/* <img src={window.aj6URL} id="aj6-pic"/> */}
+>>>>>>> edbfaa7a36cb67838049eba7d1509156cfe52876
                         <h1>Buy & Sell <br/>Authentic Sneakers</h1>
                     </div>
                 </div>

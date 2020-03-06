@@ -21,6 +21,7 @@ export const NavBar = ({currentUser, logout}) => {
 
     return (
         <div className="navbar-element">
+<<<<<<< HEAD
                  <div>
                      <a href="">Browse</a>
                  </div>
@@ -45,6 +46,32 @@ export const NavBar = ({currentUser, logout}) => {
                 <div>
                     <a href="">Sell</a>
                 </div>
+=======
+            <div>
+                <a href="">Browse</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/news/">News</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/text-me-the-app">App</a>
+            </div>
+            <div>
+                <a href="https://stockx.com/portfolios">Portfolios</a>
+            </div>
+            <div>
+                <a href="">About</a>
+            </div>
+            <div>
+                <a href="">Help</a>
+            </div>
+            <div>
+                {display}
+            </div>
+            <div>
+                <a href="">Sell</a>
+            </div>
+>>>>>>> edbfaa7a36cb67838049eba7d1509156cfe52876
         </div>
     )
 }
