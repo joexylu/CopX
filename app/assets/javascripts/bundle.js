@@ -244,7 +244,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
   _createClass(Homepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-logo"
@@ -263,7 +263,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.aj6URL,
         id: "aj6-pic"
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Buy & Sell ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Authentic Sneakers"))));
     }
   }]);
 
@@ -368,13 +368,21 @@ var NavBar = function NavBar(_ref) {
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navbar-element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Browse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "Browse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://stockx.com/news/"
   }, "News")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://stockx.com/text-me-the-app"
   }, "App")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://stockx.com/portfolios"
-  }, "Portfolios")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Help"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, display), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Sell"));
+  }, "Portfolios")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, display), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "Sell")));
 };
 
 /***/ }),
@@ -524,7 +532,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     value: function handleDemo(e) {
       e.preventDefault();
       var user = {
-        email: "beno@123.com",
+        email: "123@123.com",
         password: "123456"
       };
       this.props.processForm(user);

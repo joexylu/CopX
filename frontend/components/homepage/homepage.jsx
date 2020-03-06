@@ -10,7 +10,7 @@ class Homepage extends React.Component{
     render(){
         return(
             <div>
-                <nav className="homepage-nav-bar">
+                <div className="homepage-nav-bar">
                     <div className="homepage-nav-bar-logo">
                         <Link to="/" className="homepage-nav-bar-logo-link">
                             <img src={window.coplogoURL} id="sessionform-coplogo"/>
@@ -19,10 +19,11 @@ class Homepage extends React.Component{
                     <div className="homepage-nav-bar-links">
                         <NavBarContainer />
                     </div>
-                </nav>
+                </div>
                 <div className="homepage-body">
                     <div className="homepage-aj6">
                         <img src={window.aj6URL} id="aj6-pic"/>
+                        <h1>Buy & Sell <br/>Authentic Sneakers</h1>
                     </div>
                 </div>
             </div>
