@@ -12,6 +12,7 @@
  *
  *= require './reset.scss'
  *= require './session_form/session_forms.scss'
+ *= require './index_show_page/index_show_nav.scss'
  *= require_tree .
  *= require_self
  */

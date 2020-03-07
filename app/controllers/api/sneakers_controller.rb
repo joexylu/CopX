@@ -1,13 +1,12 @@
 class Api::SneakersController < ApplicationController
     
-    # def show
-    #     @sneaker = Sneakers.find_by(id: params[:id])
-    #     render :show
-    # end
+    def index
+        @sneakers = Sneaker.all
+        render :index
+    end
 
-    # def index
-    #     @sneakers = Sneakers.all
-    #     render index
-    # end
-
+    def show
+        @sneaker = Sneaker.find_by(id: params[:id])
+        render :show
+    end
 end
