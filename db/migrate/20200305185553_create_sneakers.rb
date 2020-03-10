@@ -5,10 +5,10 @@ class CreateSneakers < ActiveRecord::Migration[5.2]
       t.string :brand, null: false
       t.string :style, null: false
       t.string :ticker, null: false
-      t.text :description
-      t.string :release_date, null: false
       t.string :colorway, null: false
       t.string :retail_price, null: false
+      t.text :description
+      t.string :release_date
       t.timestamps
     end
     add_index :sneakers, :name, unique: true

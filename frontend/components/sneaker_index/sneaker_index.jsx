@@ -17,7 +17,6 @@ class SneakersIndex extends React.Component{
         const sneaker = this.props.sneakers.map(sneaker => (
             <SneakerIndexItem sneaker={sneaker}/>
         ))
-
         return(
             <div className="sneaker-index-page">
                 <div className="homepage-nav-bar" id="index-show-nav">
@@ -40,11 +39,174 @@ class SneakersIndex extends React.Component{
                     <img src={window.indexaj1URL} className="indexaj1-pic"/>
                 </div>
                 <div className="index-body">
-                    <div className="index-body-column">
-
+                    <div className="index-body-sidebar">
+                        <div className="index-body-sidebar-section">
+                            <div className="index-body-sidebar-1">
+                                <Link to={`/sneakers`} id="redirect-to-sneaker">
+                                    SNEAKERS
+                                </Link>
+                                <div>
+                                    STREETWEAR
+                                </div>
+                                <div>
+                                    COLLECTIBLES
+                                </div>
+                                <div>
+                                    HANDBAGS
+                                </div>
+                                <div>
+                                    WATCHES
+                                </div>
+                            </div>
+                            <div className="index-body-sidebar-2">
+                                <div>BELOW RETAIL</div>
+                            </div>
+                            <div className="index-body-sidebar-7">
+                                <div>
+                                    ADIDAS
+                                </div>
+                                <div>
+                                    AIR JORDAN
+                                </div>
+                                <div>
+                                    NIKE
+                                </div>
+                                <div>
+                                    OTHER BRANDS
+                                </div>
+                            </div>
+                            <div className="index-body-sidebar-3">SIZE TYPE
+                                <div classname="index-sidebar-checkbox"> 
+                                    <input type="checkbox"/>
+                                    <p>Men</p>
+                                </div>
+                                <div classname="index-sidebar-checkbox">
+                                    <input type="checkbox"/>
+                                    <p>Women</p>
+                                </div>
+                                <div classname="index-sidebar-checkbox">
+                                    <input type="checkbox"/>
+                                    <label>Child</label>
+                                </div>
+                                <div classname="index-sidebar-checkbox">
+                                    <input type="checkbox"/>
+                                    <label>Preschool</label>
+                                </div>
+                                <div classname="index-sidebar-checkbox">
+                                    <input type="checkbox"/>
+                                    <label>Infant</label>
+                                </div>
+                                <div classname="index-sidebar-checkbox">
+                                    <input type="checkbox"/>
+                                    <label>Toddler</label>
+                                </div>
+                            </div>
+                            <div className="index-body-sidebar-4">
+                                <p>SIZES</p>
+                                <div>
+                                    <button>1</button>
+                                    <button>1.5</button>
+                                    <button>2</button>
+                                    <button>2.5</button>
+                                    <button>3</button>
+                                    <button>3.5</button>
+                                    <button>4</button>
+                                    <button>4.5</button>
+                                    <button>5</button>
+                                    <button>5.5</button>
+                                    <button>6</button>
+                                    <button>6.5</button>
+                                    <button>7</button>
+                                    <button>7.5</button>
+                                    <button>8</button>
+                                    <button>8.5</button>
+                                    <button>9</button>
+                                    <button>9.5</button>
+                                    <button>10</button>
+                                    <button>11</button>
+                                    <button>12</button>
+                                    <button>13</button>
+                                    <button>14</button>
+                                    <button>15</button>
+                                    <button>16</button>
+                                </div>
+                            </div>
+                            <div className="index-body-sidebar-5">PRICES
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>Under $100</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>$100 - $200</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>$200 - $300</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>$300 - $400</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>$400 - $500</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox"/>
+                                    <label>$500 +</label>
+                                </div>
+                            </div>
+                        
+                            <div className="index-body-sidebar-6">RELEASE YEARS
+                                    <div>
+                                        <input type="checkbox"/>
+                                        <label> before 2001 </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox"/>
+                                        <label>2001 - $2005</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox"/>
+                                        <label>2005 - 2010</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox"/>
+                                        <label>2010 - 2015</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox"/>
+                                        <label>2015 - 2020</label>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="index-body-sneakers">
-                        {sneaker}
+                        <div className="index-body-sneakers-head">
+                            <div className="index-body-sneakers-head-left">
+                                <Link to="/sneakers">HOME    </Link>
+                                <p> / </p>
+                                <Link to="/">SNEAKER</Link>
+                            </div>
+                            <div className="index-body-sneakers-head-right">
+                                <select className="index-select-box">Sorted By:
+                                    <option>Featured</option>
+                                    <option>Most Popular</option>
+                                    <option>New Lowest Asks</option>
+                                    <option>New Highest Bid</option>
+                                    <option>Release Date</option>
+                                </select>
+                                <i className="fas fa-th"></i>
+                                <i className="fas fa-bars"></i>
+                            </div>
+                        </div>
+                        <div className="index-body-sneakers-items">
+                            <ul className="index-body-sneakers-place">
+                               {sneaker} 
+                            </ul>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

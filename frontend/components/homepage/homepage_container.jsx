@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Homepage from './homepage'
+import { getAllSneakers } from "../../actions/sneaker_actions"
 
-const mapStateToProps = state => {
-};
+const mSTP = state => {
+    return ({
+        sneakers: Object.values(state.entities.sneakers)
+    })
+}
 
-const mapDispatchProps = (dispatch) => ({
+const mDTP = dispatch => ({
+    getAllSneakers: () => dispatch(getAllSneakers())
+})
 
-});
-
-// export default connect(mapStateToProps, mapDispatchProps)(Homepage);
-export default connect(null, null)(Homepage);
+export default connect(mSTP,mDTP)(Homepage);

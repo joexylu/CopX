@@ -1,0 +1,145 @@
+.sneaker-index-page{
+    height: 1000px;
+
+}
+
+.index-welcome{
+    width: 100%;
+    height: 174px;
+    margin-top: 95px;
+    background-color: #f1f1f1;
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+    // overflow: hidden
+}
+.index-welcome-line{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0;
+}
+.index-welcome h1{
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-left: 62px;;
+}
+.index-welcome h2{
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 62px;;
+}
+
+.indexaj1-pic{
+    width: fit-content;
+    height: fit-content;
+    right: 0;
+    align-self: stretch;
+}
+
+.index-body{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.index-body-sidebar{
+    float: left;
+    width: 20%;
+    font-family: proxima-nova,sans-serif;
+    font-size: 15px;
+    color: #333;
+    background: white;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    height: 1500px;
+}
+
+.index-body-sidebar-1, .index-body-sidebar-2, .index-body-sidebar-3,
+.index-body-sidebar-4, .index-body-sidebar-5, .index-body-sidebar-6,
+.index-body-sidebar-7 {
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.index-body-sidebar-1, .index-body-sidebar-2, .index-body-sidebar-7{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-body-sidebar-1{
+    height: 100px;
+    text-decoration: none;
+    color: #333;
+}
+
+.index-body-sidebar-7{
+    height: 90px;
+}
+
+#redirect-to-sneaker {
+    text-decoration: none;
+    color: #333;
+}
+
+.index-body-sidebar-3 div, .index-body-sidebar-5 div, .index-body-sidebar-6 div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+}
+
+.index-body-sidebar-3 div:first-child, .index-body-sidebar-5 div:first-child,
+.index-body-sidebar-6 div:first-child{
+    margin-top: 10px;
+}
+.index-body-sidebar-3 div input, .index-body-sidebar-5 div input,
+.index-body-sidebar-6 div input{
+    margin-right: 5px;
+    height: 20px;
+}
+
+.index-body-sidebar-4 div{
+    margin-top: 10px;
+}
+
+.index-body-sidebar-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-body-sidebar-4 div button{
+    font-weight: bold;
+    font-size: 13px;
+    font-family: sans-serif;
+    padding-top: 2px;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

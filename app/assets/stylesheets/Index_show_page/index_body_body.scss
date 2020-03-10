@@ -1,0 +1,71 @@
+.index-body-sneakers{
+    float: right;
+    width: 80%;
+}
+
+.index-body-sneakers-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-right: 10px;
+}
+
+.index-body-sneakers-head-left{
+    display: flex;
+    justify-content: flex-start
+}
+
+.index-body-sneakers-head-left a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.index-body-sneakers-head-right{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-body-sneakers-items{
+    width: 100%;
+    height: 1000px;
+}
+.index-body-sneakers-place{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    color: #000;
+    text-align: left;
+    margin-right: -50px;
+}
+
+.index-one-item-link{
+    width: 20%;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.index-one-item-div{
+    width: 100%;
+
+}
+.index-items-img{
+    width: 100%;
+    border: solid 1px #f6f6f6;
+}
+.index-items-info{
+    padding: 16px;
+    font-family: sans-serif;
+    color: black;
+    background-color: #f6f6f6;
+    border: solid 2px #f6f6f6;
+}
+
+.index-items-info h1, .index-items-info h2, .index-items-info p{
+    width: 100%;
+}
+

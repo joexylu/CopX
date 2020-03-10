@@ -5,5 +5,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :sneakers, only: [:show, :index]
   end
+
+  
+
   root to: 'static_pages#root'
 end

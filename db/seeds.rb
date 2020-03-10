@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 User.destroy_all
 Sneaker.destroy_all
@@ -100,3 +101,75 @@ jordan_1s = [
 ]
 
 jordan_1s.map!{ |sneaker| Sneaker.create!(sneaker) }
+
+
+yeezy_350 = [
+    {
+        name: "adidas Yeezy Boost 350 V2 Earth",
+        brand: "adidas Yeezy",
+        style: "adidas Yeezy Boost 350",
+        ticker: "YB350V2-RTH",
+        colorway: "EARTH/EARTH/EARTH",
+        release_date: "05/11/2020",
+        retail_price: "$220",
+        description: "This 350 V2 strays from newer releases by bringing back a heel tab that is present in early 350 silhouettes. This model was released as a regional exclusive specific to the Americas. This Yeezy 350 V2 Earth is composed of a mud Primeknit upper with a translucent outer side stripe. A mud colored Boost cushioned sole and mud interior completes the design."
+    },
+    {
+        name: "adidas Yeezy Boost 350 V2 Tail Light",
+        brand: "adidas Yeezy",
+        style: "adidas Yeezy Boost 350",
+        ticker: "YZB350V2-TG",
+        colorway: "TAIL LIGHT/TAIL LIGHT/TAIL LIGHT",
+        release_date: "05/11/2020",
+        retail_price: "$220",
+        description: "This 350 V2 strays from newer releases by bringing back the heel tab that was present in early 350 silhouettes. This model was released as a regional exclusive specific to Europe and Russia."
+    },
+    {
+        name: "adidas Yeezy Boost 350 V2 Zebra",
+        brand: "adidas Yeezy",
+        style: "adidas Yeezy Boost 350",
+        ticker: "YZY350V2-ZEBRA",
+        colorway: "WHITE/CORE BLACK/RED",
+        release_date: "05/11/2020",
+        retail_price: "$220",
+        description: "Adidas is back with their latest Yeezy Boost 350 V2. Fresh off the heels of NBA All-Star Weekend, these Yeezy's are nicknamed the Zebras, and come in a classic white, black and red color scheme. Sporting a white-based Primeknit upper with black accents giving off a Zebra stripe vibe, “SPLY-350” displayed across the sides in red finished off by a translucent BOOST cushioned sole. To date they are the most limited adidas Yeezy release and have instantly become one of the most popular colorways."
+    },
+    {
+        name: "adidas Yeezy Boost 350 V2 Semi Frozen Yellow",
+        brand: "adidas Yeezy",
+        style: "adidas Yeezy Boost 350",
+        ticker: "AD-YB350VSFY",
+        colorway: "SEMI FROZEN YELLOW/RAW STEEL",
+        release_date: "05/11/2020",
+        retail_price: "$220",
+        description: "This colorway steps outside of the comfort zone of previous 350 Yeezy sneaker releases, which have remained subtle and mostly neutral primary colors and bright accents. The official colorway of the 'Frozen Yellow Yeezys' is actually Semi Frozen Yellow, Raw Steel and Red and features both of adidas pinnacle technologies, Boost cushioning and Primeknit sock-like upper. The hype for the yellow colored Yeezys was pushed to the roof before launch as Kanye West appeared with Kid Cudi and Takashi Murakami as 'Ye and Cudi toured the iconic artist's studio on a trip to Tokyo. "
+    },
+    {
+        name: "adidas Yeezy Boost 350 V2 Static (Non-Reflective)",
+        brand: "adidas Yeezy",
+        style: "adidas Yeezy Boost 350",
+        ticker: "YZY350V2-STATIC",
+        colorway: "STATIC/STATIC/STATIC",
+        release_date: "03/09/2020",
+        retail_price: "$220",
+        description: "Electrify your sneaker rotation with the adidas Yeezy Boost 350 V2 Static. This Yeezy 350 V2 comes with a grey and white upper and a white sole. These sneakers released in December 2018 and retailed for $220. "
+    }
+]
+
+yeezy_350.map!{ |sneaker| Sneaker.create!(sneaker) }
+
+
+# demo_user = User.create(username: "Andy", email: "andy@email.com", password: "password")
+
+# file = open('https://active-storage-copx-dev.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
+
+# demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
+
+Sneaker.all.each do |sneaker|
+    ticker = sneaker[:ticker]
+    photo = open("https://copx-seeds.s3-us-west-1.amazonaws.com/#{ticker}.jpg")
+    sneaker.photo.attach(
+      io: photo, 
+      filename: "#{ticker}.jpg"
+    )
+end
