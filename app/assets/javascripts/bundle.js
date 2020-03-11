@@ -257,6 +257,93 @@ var App = function App() {
 
 /***/ }),
 
+/***/ "./frontend/components/footer/footer.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/footer/footer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var Footer = function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-top"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-part1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-sub1-money-lang-usd"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "United State"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "English (en)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$ USD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-sub1-social"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-twitter fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-facebook-f fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-instagram-square fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-youtube fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-apple fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-android fa-lg"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-sub1-aaproud"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-cog fa-lg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Proudly Built in App Academy")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-bottom"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-part2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "HELP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "REVIEWS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "PRIVACY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "TERMS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "JOBS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "CONTACT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "PRODUCT REQUEST"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "PRESS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-part3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-part3-lang"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "IT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "DE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "FR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "ZH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-part3-right"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-at fa-sm"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "2020 CopX. All Rights Reserved.")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./frontend/components/homepage/homepage.jsx":
 /*!***************************************************!*\
   !*** ./frontend/components/homepage/homepage.jsx ***!
@@ -271,6 +358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.jsx");
 /* harmony import */ var _sneaker_index_sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sneaker_index/sneaker_index_item */ "./frontend/components/sneaker_index/sneaker_index_item.jsx");
+/* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../footer/footer */ "./frontend/components/footer/footer.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -288,6 +376,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -312,11 +401,14 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var sneaker = this.props.sneakers.map(function (sneaker) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sneaker_index_sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "homepage-sneakers"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sneaker_index_sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           sneaker: sneaker
-        });
+        }));
       });
-      var selectedSneaker = sneaker.slice(4, 9);
+      var selectedSneaker1 = sneaker.slice(2, 7);
+      var selectedSneaker2 = sneaker.slice(7, 12);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -329,7 +421,10 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.coplogoURL,
         id: "sessionform-coplogo"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.copxlogowhiteURL,
+        id: "sessionform-copxlogowhite"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-aj6"
@@ -338,10 +433,75 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
         id: "aj6-pic"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Buy & Sell ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Authentic Sneakers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Sneakers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Streetwear"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Collectibles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Handbags"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Watches"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-category-selector"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "homepage-body-sneaker-selection"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "homepage-sneaker-bold"
+      }, "Sneakers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Streetwear"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Collectibles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Handbags"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Watches"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-rolling-picture"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "./homepage-ads.jpg",
+        id: "homepage-ads"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-content-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-popular-brands-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Popular Brands ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-question-circle"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/sneakers",
         className: "homepage-view-all-sneaker"
-      }, "See All")));
+      }, "See All")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "homepage-brands-place"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "home-page-brands"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.ajhomepageURL,
+        id: "homepage-brand-img"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "home-page-brands-name"
+      }, "Jordan")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "home-page-brands"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.nikehomepageURL,
+        id: "homepage-brand-img"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "home-page-brands-name"
+      }, "Nike")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "home-page-brands"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.adidashomepageURL,
+        id: "homepage-brand-img"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "home-page-brands-name"
+      }, "Adidas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "home-page-brands"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.yeezyhomepageURL,
+        id: "homepage-brand-img"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "home-page-brands-name"
+      }, "Yeezy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-popular-brands-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Most Popular ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-question-circle"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers",
+        className: "homepage-view-all-sneaker"
+      }, "See All")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "homepage-sneakers-place"
+      }, selectedSneaker1), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-popular-brands-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Recommended for You ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-question-circle"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers",
+        className: "homepage-view-all-sneaker"
+      }, "See All")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "homepage-sneakers-place"
+      }, selectedSneaker2))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
   }]);
 
@@ -954,6 +1114,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.jsx");
 /* harmony import */ var _sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sneaker_index_item */ "./frontend/components/sneaker_index/sneaker_index_item.jsx");
+/* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../footer/footer */ "./frontend/components/footer/footer.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -971,6 +1132,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1046,27 +1208,27 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADIDAS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "AIR JORDAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "NIKE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "OTHER BRANDS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sidebar-3"
       }, "SIZE TYPE", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Child")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Preschool")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Infant")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        classname: "index-sidebar-checkbox"
+        className: "index-sidebar-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Toddler"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1104,9 +1266,9 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sneakers-head-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/sneakers"
-      }, "HOME    "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " / "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
+      }, "HOME    "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " / "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers"
       }, "SNEAKER")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sneakers-head-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -1119,7 +1281,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
         className: "index-body-sneakers-items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "index-body-sneakers-place"
-      }, sneaker)))));
+      }, sneaker)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
   }]);
 
@@ -1249,7 +1411,11 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      // debugger
+      // let brand = this.props.sneaker.brand
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar",
         id: "index-show-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1269,7 +1435,95 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links",
         id: "index-show-page-navbar-contain"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "here is the sneaker you want to buy"));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-url-share"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-url"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "HOME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " / "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers"
+      }, "SNEAKER "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " /", this.props.sneaker.brand, " /", this.props.sneaker.style, " /", this.props.sneaker.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-social"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-head-dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "show-head-dropbtn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-arrow-up"
+      }), "SHARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-head-dropdown-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fab fa-twitter"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fab fa-facebook-f"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fab fa-pinterest"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-envelope"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "show-head-button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus"
+      }), "PORTFOLIO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "show-head-button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus"
+      }), "FOLLOW")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-name"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.sneaker.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-condition"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Condition:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "sneaker-show-body-head-green"
+      }, "New")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-ticker"
+      }, "Ticker: ", this.props.sneaker.ticker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-authentic"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "sneaker-show-body-head-green"
+      }, "100% Authentic"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-head-listing-bid-buy"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-img"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.sneaker.photoUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinfo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinf-left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinf-detail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "COLORWAY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.sneaker.colorway)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinf-detail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "RETAIL PRICE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.sneaker.retail_price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinf-detail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "RELEASE DATE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.sneaker.release_date))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-body-sneakerinf-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.sneaker.description)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-show-divider"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sneaker-product-summary"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-temperature-high"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "52 WEEK HIGH $--- | LOW $---")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-chart-bar"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "TRADE RANGE (12 MOS.) $XXX - $XXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-balance-scale"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "VOLATILITY X.X%"))))));
     }
   }]);
 
@@ -1298,8 +1552,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state, ownProps) {
   return {
-    sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
-    sneakerId: ownProps.match.params.sneakerId
+    sneaker: state.entities.sneakers[ownProps.match.params.sneakerId] || {},
+    sneakerId: ownProps.match.params.sneakerId || null
   };
 };
 
@@ -1515,7 +1769,7 @@ var sneakerReducer = function sneakerReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
-  var nextState = Object.assign({}, action);
+  var nextState = Object.assign({}, state);
 
   switch (action.type) {
     case _actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_SNEAKERS"]:

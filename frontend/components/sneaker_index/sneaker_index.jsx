@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from "../navbar/navbar_container"
 import SneakerIndexItem from "./sneaker_index_item"
+import Footer from "../footer/footer"
 
 class SneakersIndex extends React.Component{
     constructor(props){
@@ -76,27 +77,27 @@ class SneakersIndex extends React.Component{
                                 </div>
                             </div>
                             <div className="index-body-sidebar-3">SIZE TYPE
-                                <div classname="index-sidebar-checkbox"> 
+                                <div className="index-sidebar-checkbox"> 
                                     <input type="checkbox"/>
                                     <p>Men</p>
                                 </div>
-                                <div classname="index-sidebar-checkbox">
+                                <div className="index-sidebar-checkbox">
                                     <input type="checkbox"/>
                                     <p>Women</p>
                                 </div>
-                                <div classname="index-sidebar-checkbox">
+                                <div className="index-sidebar-checkbox">
                                     <input type="checkbox"/>
                                     <label>Child</label>
                                 </div>
-                                <div classname="index-sidebar-checkbox">
+                                <div className="index-sidebar-checkbox">
                                     <input type="checkbox"/>
                                     <label>Preschool</label>
                                 </div>
-                                <div classname="index-sidebar-checkbox">
+                                <div className="index-sidebar-checkbox">
                                     <input type="checkbox"/>
                                     <label>Infant</label>
                                 </div>
-                                <div classname="index-sidebar-checkbox">
+                                <div className="index-sidebar-checkbox">
                                     <input type="checkbox"/>
                                     <label>Toddler</label>
                                 </div>
@@ -185,9 +186,9 @@ class SneakersIndex extends React.Component{
                     <div className="index-body-sneakers">
                         <div className="index-body-sneakers-head">
                             <div className="index-body-sneakers-head-left">
-                                <Link to="/sneakers">HOME    </Link>
+                                <Link to="/">HOME    </Link>
                                 <p> / </p>
-                                <Link to="/">SNEAKER</Link>
+                                <Link to="/sneakers">SNEAKER</Link>
                             </div>
                             <div className="index-body-sneakers-head-right">
                                 <select className="index-select-box">Sorted By:
@@ -209,6 +210,7 @@ class SneakersIndex extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

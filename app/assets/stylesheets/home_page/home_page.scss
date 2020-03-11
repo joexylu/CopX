@@ -31,32 +31,159 @@
     padding-right: 30px;
     width: 50%;
 }
+// .homepage-nav-bar-logo-link{
+//     position: relative;
+// }
+// .homepage-nav-bar-logo-link img{
+//     position: absolute;
+// }
 
-#aj6-pic{
-    width: 100%;
+
+// .homepage-nav-bar.scrolled #sessionform-coplogo{
+//     opacity: 1;
+// }
+
+// #sessionform-coplogo{
+//     opacity: 0;
+//     position: relative;
+// }
+
+// #sessionform-copxlogowhite{
+//     position: absolute;
+// }
+
+.homepage-nav-bar.scrolled #sessionform-coplogo{
+    opacity: 1;
+}
+
+.homepage-aj6{
     position: relative;
 }
 
+#aj6-pic{
+    width: 100%;
+}
+
 .homepage-aj6 h1{
+    top: 300px;
+    left: 1500px;
     width: 100%;
     align-content: center;
     position: absolute;
-    top: 30%;
-    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    z-index: 300;
 }
 
 .homepage-body{
     width: 100%;
-    height: 900px;
-    background-color: rgb(197, 163, 163);
+    // background-color: rgb(197, 163, 163);
+}
+
+.homepage-category-selector{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.homepage-body-sneaker-selection{
+    width: 600px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.homepage-body-sneaker-selection div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#homepage-sneaker-bold{
+    border-style: solid;
+    border-bottom: black solid 5px;
+    font-weight: bold;
+}
+
+#homepage-rolling-picture{
+    width: 100%;
+}
+.homepage-rolling-picture img{
+    width: 100%;
+}
+
+.homepage-content-body{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.homepage-popular-brands-head{
+    margin-top: 24px;
+    width: 100%;
+    font-size: 18px;
+    color: rgb(1, 1, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+    font-family: sans-serif;
+}
+
+.homepage-sneakers-place{
+    display: flex;
+    align-items: flex-start;
+}
+.homepage-sneakers{
+    width: 25%;
+    display: inline-block;
 }
 
 .homepage-view-all-sneaker{
     text-decoration: none;
     font-family: sans-serif;
     color: rgb(8, 160, 92);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
+}
+
+
+.homepage-brands-place{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 250px;
+}
+
+#homepage-brand-img{
+    max-width: 95%;
+    height: auto;
+}
+
+.home-page-brands {
+    width: 23%;
+    height: 100%;
+    position: relative;
+}
+.home-page-brands-pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.home-page-brands-name {
+    top: 15px;
+    left:80px;
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }

@@ -1,0 +1,235 @@
+.sneaker-show-body{
+    margin-top: 110px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.sneaker-show-body-head-url-share{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.sneaker-show-body-head-url{
+    display: flex;
+    align-items: center;
+}
+
+.sneaker-show-body-head-url a, .sneaker-show-body-head-url span{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #949494;
+    text-transform: uppercase;
+}
+
+.sneaker-show-body-head-social{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.show-head-dropbtn {
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    height: 80%;
+}
+
+.show-head-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.show-head-dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    height: 25px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 20px;
+}
+
+.show-head-dropdown-content a{
+    color: black;
+    padding-right: 12px;
+    padding-left: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.show-head-dropdown:hover .show-head-dropdown-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-head-button{
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    height: 80%;
+}
+
+.sneaker-show-body-head-name{
+    width: 100%;
+}
+
+.sneaker-show-body-head-name h1{
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.sneaker-show-body-head-info{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+.sneaker-show-body-head-info span{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.sneaker-show-body-head-condition{
+    display: flex;
+    justify-content: flex-start;
+    font-family: sans-serif;
+}
+
+.sneaker-show-body-head-condition h1{
+    padding-right: 2px;
+    color: #999;
+}
+.sneaker-show-body-head-ticker{
+    font-family: sans-serif;
+    color: #999;
+}
+
+.sneaker-show-body-head-authentic{
+    font-family: sans-serif;
+}
+
+#sneaker-show-body-head-green{
+    color: #08a05c;
+}
+
+.sneaker-show-body-head-listing-bid-buy{
+    margin-top: 40px;
+    width: 100%;
+    height: 105px;
+    background-color: rgb(223, 184, 219);
+}
+
+.sneaker-show-body-img{
+    width: 100%;
+    margin-top: 25px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.sneaker-show-body-img img{
+    width: 700px;
+}
+
+.sneaker-show-body-sneakerinfo{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sneaker-show-body-sneakerinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sneaker-show-body-sneakerinf-left{
+    width: 30%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sneaker-show-body-sneakerinf-detail{
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin-left: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    max-width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.sneaker-show-body-sneakerinf-detail span{
+    padding-right: 5px;
+    font-stretch: 50%;
+}
+
+.sneaker-show-body-sneakerinf-detail span:first-child{
+    font-weight: 700;
+}
+
+.sneaker-show-body-sneakerinf-right{
+    box-sizing: border-box;
+    width: 65%;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.sneaker-show-body-sneakerinf-right p{
+    color: #333333;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.sneaker-show-divider{
+    height: 110px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+
+.sneaker-product-summary ul{
+    margin-left: 125px;
+    margin-right: 125px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    min-height: 110px;
+    margin-bottom: 0; 
+}
+
+.sneaker-product-summary ul li i{
+    padding-right: 6px;
+}
+
+.sneaker-product-summary ul li span{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.fas.fa-balance-scale{
+    color: rgb(192, 115, 60);
+}
+
+.fas.fa-chart-bar{
+    color: rgb(219, 105, 128);
+}
+
+.fas.fa-temperature-high{
+    color: green;
+}

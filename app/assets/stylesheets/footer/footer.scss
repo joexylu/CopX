@@ -1,0 +1,120 @@
+.footer{
+    height: 200px;
+    background-size: cover;
+    background-color: rgb(61, 61, 61);
+    color: rgb(211, 211, 211);
+    bottom: 0px;
+    position: relative;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.footer-top{
+    min-height: 65px;
+    height: 50%;
+    background-color: rgb(85, 85, 85);
+}
+
+.footer-part1{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-sub1-money-lang-usd{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 12px;
+    min-width: 140px;
+    justify-content: space-around;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(128, 128, 128);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 0px 5px;
+
+}
+
+.footer-sub1-money-lang-usd span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #d3d3d3;
+}
+
+.footer-sub1-social{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-sub1-aaproud span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #d3d3d3;
+}
+
+.footer-sub1-aaproud i{
+    padding-right: 8px;
+}
+
+.footer-bottom{
+    min-height: 65px;
+    height: 50%;
+}
+
+.footer-part2{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 35%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.footer-part2 span{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer-part2 span, .footer-part2 a{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.footer-part3{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-part3-lang{
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-part3-lang a, .footer-part3-right span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #d3d3d3;
+    text-decoration: none;
+}

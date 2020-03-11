@@ -12,7 +12,6 @@ const SneakerIndexItem = props => {
                         <h1>Price</h1>
                     </div>
                 </div>
-                
             </Link>    
     )
 }

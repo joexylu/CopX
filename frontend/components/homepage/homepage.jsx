@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from "../navbar/navbar_container";
 import SneakerIndexItem from "../sneaker_index/sneaker_index_item"
+import Footer from "../footer/footer"
 
 class Homepage extends React.Component{
     constructor(props){
@@ -11,16 +12,17 @@ class Homepage extends React.Component{
     componentDidMount(){
         this.props.getAllSneakers()
     }
-
-
     
     render(){
 
         const sneaker = this.props.sneakers.map(sneaker => (
-            <SneakerIndexItem sneaker={sneaker}/>
+            <div className="homepage-sneakers">
+                <SneakerIndexItem sneaker={sneaker}/>
+            </div>
         ))
 
-        const selectedSneaker = sneaker.slice(4, 9)
+        const selectedSneaker1 = sneaker.slice(2, 7)
+        const selectedSneaker2 = sneaker.slice(7,12)
 
 
         return(
@@ -30,6 +32,7 @@ class Homepage extends React.Component{
                         <Link to="/" className="homepage-nav-bar-logo-link">
                             <img src={window.coplogoURL} id="sessionform-coplogo"/>
                         </Link>
+                        <img src={window.copxlogowhiteURL} id="sessionform-copxlogowhite"/>
                     </div>
                     <div className="homepage-nav-bar-links">
                         <NavBarContainer />
@@ -40,17 +43,60 @@ class Homepage extends React.Component{
                     <h1>Buy & Sell <br/>Authentic Sneakers</h1>
                 </div>
                 <div className="homepage-body">
-                    <div>
-                        <ul>
-                            <div>Sneakers</div>
+                    <div className="homepage-category-selector">
+                        <ul className="homepage-body-sneaker-selection">
+                            <div id="homepage-sneaker-bold">Sneakers</div>
                             <div>Streetwear</div>
                             <div>Collectibles</div>
                             <div>Handbags</div>
                             <div>Watches</div>
                         </ul>
                     </div>
-                    <Link to="/sneakers" className="homepage-view-all-sneaker">See All</Link>
+                    <div className="homepage-rolling-picture">
+                        <img src="./homepage-ads.jpg" id="homepage-ads"/>
+                    </div>
+                    <div className="homepage-content-body">
+                        <div className="homepage-popular-brands-head">
+                            <span>Popular Brands <i className="fas fa-question-circle"></i></span>
+                            <Link to="/sneakers" className="homepage-view-all-sneaker">See All</Link>
+                        </div>
+                        <ul className="homepage-brands-place">
+                            <div className="home-page-brands">
+                                <img src={window.ajhomepageURL} id="homepage-brand-img"/>
+                                <span className="home-page-brands-name">Jordan</span>
+                            </div>
+                            <div className="home-page-brands">
+                                <img src={window.nikehomepageURL} id="homepage-brand-img"/>
+                                <span className="home-page-brands-name">Nike</span>
+                            </div>
+                            <div className="home-page-brands">
+                                <img src={window.adidashomepageURL} id="homepage-brand-img"/>
+                                <span className="home-page-brands-name">Adidas</span>
+                            </div>
+                            <div className="home-page-brands">
+                                <img src={window.yeezyhomepageURL} id="homepage-brand-img"/>
+                                <span className="home-page-brands-name">Yeezy</span>
+                            </div>
+                        </ul>
+
+                        <div className="homepage-popular-brands-head">
+                            <span>Most Popular <i className="fas fa-question-circle"></i></span>
+                            <Link to="/sneakers" className="homepage-view-all-sneaker">See All</Link>
+                        </div>
+                        <ul className="homepage-sneakers-place">
+                               {selectedSneaker1} 
+                        </ul>
+                        <div className="homepage-popular-brands-head">
+                            <span>Recommended for You <i className="fas fa-question-circle"></i></span>
+                            <Link to="/sneakers" className="homepage-view-all-sneaker">See All</Link>
+                        </div>
+                        <ul className="homepage-sneakers-place">
+                               {selectedSneaker2} 
+                        </ul>
+                    </div>
+
                 </div>
+                <Footer />
             </div>
         )
     }
