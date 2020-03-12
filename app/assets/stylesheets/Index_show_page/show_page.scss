@@ -126,12 +126,7 @@
     color: #08a05c;
 }
 
-.sneaker-show-body-head-listing-bid-buy{
-    margin-top: 40px;
-    width: 100%;
-    height: 105px;
-    background-color: rgb(223, 184, 219);
-}
+
 
 .sneaker-show-body-img{
     width: 100%;
@@ -201,7 +196,6 @@
     background-color: #f5f5f5;
 }
 
-
 .sneaker-product-summary ul{
     margin-left: 125px;
     margin-right: 125px;
@@ -233,3 +227,260 @@
 .fas.fa-temperature-high{
     color: green;
 }
+
+////////////////////////////////////////////////////////////
+
+//sale info!!
+.sneaker-show-body-head-listing-bid-buy{
+    margin-top: 40px;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sneaker-show-body-head-listing-sizes{
+    padding-right: 25px;
+    border-right: 1px solid #ccc;
+    margin-bottom: 35px;
+}
+
+.sneaker-show-body-head-listing-sizes label{
+    font-size: 18px;
+    color: #999;
+    margin: 0;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+
+///////////need a listing index drop down display
+.sneaker-show-body-head-listing-select{
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.show-items-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    height: 500px;
+    padding: 2.5px;
+    top: 135%;
+    width: 180px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    transition: visibility .2s ease-out,opacity .2s linear;
+}
+
+.show-items-dropdown-list{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#select-btn{
+    background: #fff;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show-items-dropdown-list button h1{
+    font: 700 20px sans-serif;
+}
+
+.show-items-dropdown-list button h2{
+    font: 700 14px sans-serif;
+    padding-bottom: 6.5px;
+    text-transform: uppercase;
+    color: #08a05c;
+}
+
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+
+
+//////////
+
+.sneaker-show-body-head-listing-select button{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    text-transform: capitalize;
+    white-space: normal;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.sneaker-show-body-head-listing-select button i{
+    font-size: 25px;
+    margin-left: 15px;
+    color: #999;
+}
+
+.sneaker-show-body-head-lastsale{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.sneaker-show-body-head-lastsale{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.show-lastsale-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-lastsale-info span{
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: #999;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.show-lastsale-info h1{
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 5px 0 10px;
+    font-weight: 500;
+}
+
+.show-lastsale-info-updown{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.show-lastsale-info-updown i{
+    color: #08a05c;
+}
+
+.show-lastsale-size{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.show-lastsale-size h1{
+    font-family: sans-serif;
+}
+
+.show-lastsale-size span{
+    color: #999;
+    align-self: stretch;
+    margin: 5px 10px;
+}
+
+.show-lastsale-size a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.sneaker-show-body-head-buy{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sneaker-show-buy-btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 17px 5px;
+    margin: auto;
+    border-radius: 5px;
+    width: 100%;
+    color: #fff;
+    min-height: 77px;
+    background-color: #08a05c;
+    text-decoration: none;
+}
+
+#sneaker-show-buy-btn-divide{
+    border-left: 1px solid #fff;
+    align-self: stretch;
+    margin: 0 13px;
+}
+
+.sneaker-show-buy-btn div h1{
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.sneaker-show-buy-btn div span{
+    color: #c6e6c2;
+}
+
+.sneaker-show-body-head-buy-salesize{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5px;
+}
+
+.sneaker-show-body-head-buy-salesize h1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    font-family: sans-serif;
+}
+
+.sneaker-show-body-head-buy-salesize span{
+    border-left: 1px solid #999;
+    align-self: stretch;
+    margin: 5px 10px;
+}
+
+.sneaker-show-body-head-buy-salesize a{
+    color: #000;
+    font-size: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

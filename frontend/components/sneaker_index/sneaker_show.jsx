@@ -1,19 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from "../navbar/navbar_container"
+import Footer from "../footer/footer"
+// import ListItemsIndexContainer from "../listingItems/listitems_index_container"
 
 class SneakerShow extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+            size: "All",
+            price: "---",
+            id: ""
+        }
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount(){
-        this.props.getSneaker(this.props.sneakerId)
+        this.props.getListingItems(this.props.sneakerId)
+        this.props.getSneaker(this.props.sneakerId)  
     }
 
+    handleClick(e){
+        e.preventDefault()
+        const info = e.currentTarget.value.split(",")
+        return(
+            this.setState({
+                id: info[0],
+                size: info[1],
+                price: info[2]
+            })
+        )
+    }
+
+    
+
     render(){
-        // debugger
-        // let brand = this.props.sneaker.brand
+        $(document).ready(function() {   
+            $('.show-listing-select-dropbtn').click(function(){
+                $('.show-items-dropdown-content').toggleClass('show');
+            });
+        });
+        const items = this.props.ListingItems
         return(
             <div className="sneaker-show-page">
                 <div className="homepage-nav-bar" id="index-show-nav">
@@ -88,7 +115,63 @@ class SneakerShow extends React.Component{
                         </div>
                         
                         <div className="sneaker-show-body-head-listing-bid-buy">
+                            <div className="sneaker-show-body-head-listing-sizes">
+                                <label>Size</label>
+                                {/* need a drop down here */}
+                                <div className="sneaker-show-body-head-listing-select">
+                                    <button className="show-listing-select-dropbtn">
+                                        <span>{this.state.size}</span>
+                                        <i className="fas fa-angle-down"></i>
+                                    </button>
+                                    <div id="show-items-Dropdown" className="show-items-dropdown-content">
 
+                                        <ul className="show-items-dropdown-list">
+                                        {
+                                            items && items.map(listItem => (
+                                                    <button onClick={this.handleClick} value={[listItem.id, listItem.size, listItem.price]} id="select-btn">
+                                                        <h1>{listItem.size}</h1>
+                                                        <h2>${listItem.price}</h2>
+                                                    </button> 
+                                            ))
+                                        }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="sneaker-show-body-head-lastsale">
+                                <div className="show-lastsale-info">
+                                    <span>Last Sale</span>
+                                    <h1>$---</h1>
+                                    <div className="show-lastsale-info-updown">
+                                        <i className="fas fa-caret-up"></i>
+                                        <span>+$--</span>
+                                        <span>(%---)</span>
+                                    </div>
+                                </div>
+                                <div className="show-lastsale-size">
+                                    <h1>Size {this.state.size}</h1>
+                                    <span>|</span>
+                                    <a href="">View All Sales</a>
+                                </div>
+                            </div>
+                            <div className="sneaker-show-body-head-buy">
+                                <Link to={`/listingitems/${this.state.id}`} className="sneaker-show-buy-btn">
+                                    <div>
+                                        <h1>${this.state.price}</h1>
+                                        <span>Lowest Ask</span>
+                                    </div>
+                                    <span id="sneaker-show-buy-btn-divide"></span>
+                                    <div>
+                                        <h1>Buy</h1>
+                                        <span>or Bid</span>
+                                    </div>    
+                                </Link>
+                                <div className="sneaker-show-body-head-buy-salesize">
+                                    <h1>Size {this.state.size}</h1>
+                                    <span></span>
+                                    <a href="">View All Asks</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -136,6 +219,9 @@ class SneakerShow extends React.Component{
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div>
+                    <Footer />
                 </div>
             </div>
         )

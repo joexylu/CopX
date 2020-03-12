@@ -5,7 +5,7 @@
     color: rgb(211, 211, 211);
     bottom: 0px;
     position: relative;
-    width: 100%;
+    // width: 100%;
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -13,7 +13,8 @@
 .footer-top{
     min-height: 65px;
     height: 50%;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(98, 98, 98);
+    // width: 100%;
 }
 
 .footer-part1{
@@ -25,6 +26,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    // width: 100%;
 }
 
 .footer-sub1-money-lang-usd{

@@ -210,7 +210,9 @@ class SneakersIndex extends React.Component{
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <div className="all-footer">
+                    <Footer />
+                </div>
             </div>
         )
     }
