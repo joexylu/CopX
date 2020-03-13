@@ -7,10 +7,27 @@ import Footer from "../footer/footer"
 class SneakersIndex extends React.Component{
     constructor(props){
         super(props)
+        this.handleGetBrand = this.handleGetBrand.bind(this)
+        this.handleAllBrand = this.handleAllBrand.bind(this)
     }
 
     componentDidMount(){
         this.props.getAllSneakers()
+    }
+
+    handleGetBrand(e){
+        e.preventDefault()
+        const brand = e.currentTarget.value
+        return(
+            this.props.getAllSneakersByBrand(brand)
+        )    
+    }
+
+    handleAllBrand(e){
+        e.preventDefault()
+        return(
+            this.props.getAllSneakers()
+        )    
     }
 
     render(){
@@ -18,6 +35,7 @@ class SneakersIndex extends React.Component{
         const sneaker = this.props.sneakers.map(sneaker => (
             <SneakerIndexItem sneaker={sneaker}/>
         ))
+        
         return(
             <div className="sneaker-index-page">
                 <div className="homepage-nav-bar" id="index-show-nav">
@@ -63,18 +81,18 @@ class SneakersIndex extends React.Component{
                                 <div>BELOW RETAIL</div>
                             </div>
                             <div className="index-body-sidebar-7">
-                                <div>
+                                <button onClick={this.handleAllBrand}>
+                                    All
+                                </button>
+                                <button onClick={this.handleGetBrand} value="adidas Yeezy">
                                     ADIDAS
-                                </div>
-                                <div>
+                                </button>
+                                <button onClick={this.handleGetBrand} value="Air Jordan">
                                     AIR JORDAN
-                                </div>
-                                <div>
+                                </button>
+                                <button>
                                     NIKE
-                                </div>
-                                <div>
-                                    OTHER BRANDS
-                                </div>
+                                </button>
                             </div>
                             <div className="index-body-sidebar-3">SIZE TYPE
                                 <div className="index-sidebar-checkbox"> 

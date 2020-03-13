@@ -1,7 +1,11 @@
 class Api::SneakersController < ApplicationController
     
     def index
-        @sneakers = Sneaker.all
+        if params[:brand]
+            @sneakers = Sneaker.where(brand: params[:brand])
+        else
+            @sneakers = Sneaker.all
+        end
         render :index
     end
 

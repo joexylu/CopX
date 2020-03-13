@@ -208,7 +208,7 @@ var logout = function logout() {
 /*!*********************************************!*\
   !*** ./frontend/actions/sneaker_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_ALL_SNEAKERS, RECEIVE_SNEAKER, getAllSneakers, getSneaker */
+/*! exports provided: RECEIVE_ALL_SNEAKERS, RECEIVE_SNEAKER, getAllSneakers, getAllSneakersByBrand, getSneaker */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -216,6 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_SNEAKERS", function() { return RECEIVE_ALL_SNEAKERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SNEAKER", function() { return RECEIVE_SNEAKER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllSneakers", function() { return getAllSneakers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllSneakersByBrand", function() { return getAllSneakersByBrand; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSneaker", function() { return getSneaker; });
 /* harmony import */ var _util_sneaker_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/sneaker_api_util */ "./frontend/util/sneaker_api_util.js");
 
@@ -239,6 +240,13 @@ var receive_sneaker = function receive_sneaker(sneaker) {
 var getAllSneakers = function getAllSneakers() {
   return function (dispatch) {
     return Object(_util_sneaker_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchSneakers"])().then(function (response) {
+      return dispatch(receive_all_sneakers(response));
+    });
+  };
+};
+var getAllSneakersByBrand = function getAllSneakersByBrand(brand) {
+  return function (dispatch) {
+    return Object(_util_sneaker_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchSneakerByBrand"])(brand).then(function (response) {
       return dispatch(receive_all_sneakers(response));
     });
   };
@@ -1611,9 +1619,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1629,15 +1637,33 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(SneakersIndex, _React$Component);
 
   function SneakersIndex(props) {
+    var _this;
+
     _classCallCheck(this, SneakersIndex);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(SneakersIndex).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SneakersIndex).call(this, props));
+    _this.handleGetBrand = _this.handleGetBrand.bind(_assertThisInitialized(_this));
+    _this.handleAllBrand = _this.handleAllBrand.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(SneakersIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getAllSneakers();
+    }
+  }, {
+    key: "handleGetBrand",
+    value: function handleGetBrand(e) {
+      e.preventDefault();
+      var brand = e.currentTarget.value;
+      return this.props.getAllSneakersByBrand(brand);
+    }
+  }, {
+    key: "handleAllBrand",
+    value: function handleAllBrand(e) {
+      e.preventDefault();
+      return this.props.getAllSneakers();
     }
   }, {
     key: "render",
@@ -1691,7 +1717,15 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
         className: "index-body-sidebar-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "BELOW RETAIL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sidebar-7"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADIDAS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "AIR JORDAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "NIKE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "OTHER BRANDS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleAllBrand
+      }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleGetBrand,
+        value: "adidas Yeezy"
+      }, "ADIDAS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleGetBrand,
+        value: "Air Jordan"
+      }, "AIR JORDAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "NIKE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sidebar-3"
       }, "SIZE TYPE", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-sidebar-checkbox"
@@ -1798,7 +1832,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state) {
   return {
-    sneakers: Object.values(state.entities.sneakers)
+    sneakers: Object.values(state.entities.sneakers) || []
   };
 };
 
@@ -1806,6 +1840,9 @@ var mDTP = function mDTP(dispatch) {
   return {
     getAllSneakers: function getAllSneakers() {
       return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_2__["getAllSneakers"])());
+    },
+    getAllSneakersByBrand: function getAllSneakersByBrand(brand) {
+      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_2__["getAllSneakersByBrand"])(brand));
     }
   };
 };
@@ -2586,13 +2623,14 @@ var destorySession = function destorySession() {
 /*!*******************************************!*\
   !*** ./frontend/util/sneaker_api_util.js ***!
   \*******************************************/
-/*! exports provided: fetchSneakers, fetchSneaker */
+/*! exports provided: fetchSneakers, fetchSneaker, fetchSneakerByBrand */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSneakers", function() { return fetchSneakers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSneaker", function() { return fetchSneaker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSneakerByBrand", function() { return fetchSneakerByBrand; });
 var fetchSneakers = function fetchSneakers() {
   return $.ajax({
     method: "GET",
@@ -2603,6 +2641,15 @@ var fetchSneaker = function fetchSneaker(sneakerId) {
   return $.ajax({
     method: "GET",
     url: "/api/sneakers/".concat(sneakerId)
+  });
+};
+var fetchSneakerByBrand = function fetchSneakerByBrand(brand) {
+  return $.ajax({
+    method: "GET",
+    url: "/api/sneakers/",
+    data: {
+      brand: brand
+    }
   });
 };
 

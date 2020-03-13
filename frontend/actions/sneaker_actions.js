@@ -1,4 +1,4 @@
-import {fetchSneakers, fetchSneaker} from "../util/sneaker_api_util"
+import {fetchSneakers, fetchSneaker, fetchSneakerByBrand} from "../util/sneaker_api_util"
 
 export const RECEIVE_ALL_SNEAKERS = "RECEIVE_ALL_SNEAKERS"
 export const RECEIVE_SNEAKER = "RECEIVE_SNEAKER"
@@ -15,6 +15,9 @@ const receive_sneaker = sneaker => ({
 })
 
 export const getAllSneakers = () => dispatch => fetchSneakers()
+    .then((response) => dispatch(receive_all_sneakers(response)))
+
+export const getAllSneakersByBrand = (brand) => dispatch => fetchSneakerByBrand(brand)
     .then((response) => dispatch(receive_all_sneakers(response)))
 
 export const getSneaker = (sneakerId) => dispatch => fetchSneaker(sneakerId)

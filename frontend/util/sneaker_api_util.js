@@ -12,3 +12,11 @@ export const fetchSneaker = (sneakerId) => {
     })
 }
 
+
+export const fetchSneakerByBrand = (brand) => {
+    return $.ajax({
+        method: "GET",
+        url: `/api/sneakers/`,
+        data: {brand: brand}
+    })
+}

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :sneakers, only: [:show, :index] do
       resources :listingitems, only: [:index]
     end
+    # get "/sneakers/brands", to: "anime#brands"
 
     resources :listingitems, only: [:show, :destroy]
   end

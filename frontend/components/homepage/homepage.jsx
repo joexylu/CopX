@@ -26,8 +26,6 @@ class Homepage extends React.Component{
     componentWillUnmount() {
         clearInterval(this.timeout);
     }
-
-
     
     render(){
 
