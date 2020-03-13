@@ -30,19 +30,7 @@ class ListingItemsIndex extends React.Component{
                         <a href="">FAQ</a>
                     </div>
                 </div>
-                <div className="listing-index-body">
-                    <div className="listing-right-part">
-                        <div className="">
-                            
-                        </div>
-                        <div className="">
-                            {item}
-                        </div>
-                    </div>
-                    <div className="listing-left-part">
-
-                    </div>
-                </div>
+                
 
                 
             </div>

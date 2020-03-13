@@ -1,0 +1,300 @@
+.listing-show-body{
+    // width: 100%;
+    height: 850px;
+    padding-top: 92px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.listing-left-part{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    padding: 0 5% 70px;
+}
+
+.listing-rigtht-part{
+    width: 40%;
+    height: 100%;
+    background-color: #fafafa;
+    padding: 0 5% 70px;
+}
+
+.listing-left-part-head{
+    text-align: center;
+    padding: 30px 0 0;
+}
+
+.listing-left-part-head h1{
+    font-weight: 500;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    letter-spacing: 0;
+}
+
+.left-part-head-bidding-info{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.left-part-head-bidding-info span, .left-part-head-bidding-info h2{
+    margin-right: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.left-part-head-bidding-info h2{
+    font-weight: bolder;
+}
+
+.left-part-head-size{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.listing-left-part-body{
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.listing-left-part-body img{
+    width: 100%;
+}
+
+.listing-rigtht-part1{
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e5e7ea;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.listing-rigtht-part1 a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.listing-rigtht-part2{
+    background: #fff;
+    border-radius: 4px;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.right-part-buybid-switch{
+    margin-bottom: 40px;
+    display: flex;
+    height: 55px;
+    background: rgb(250, 250, 250);
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 231, 234);
+    justify-content: space-between;
+}
+.right-part-buybid-switch a{
+    text-decoration: none;
+    color: rgb(1, 1, 1);
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0px;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 30px;
+    width: 50%;
+}
+
+.right-part-buybid-switch div{
+    width: 50%;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border-radius: 30px;
+    background: rgb(8, 160, 92);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(8, 160, 92);
+}
+
+.right-part-price-amount{
+    height: 60px;
+    display: flex;
+    background: #fff;
+    font-size: 30px;
+}
+
+.right-part-price-amount span:first-child{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+}
+.right-part-price-amount span:last-child{
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.right-part-bid-warning{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.right-part-bid-warning span{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.right-part-affirm-promo{
+    padding: 10px 30px 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.right-part-affirm-promo a{
+    text-decoration: none;
+    color: #08a05c;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.right-part-affirm-promo span{
+    font-weight: 200;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.right-part-order-summary{
+    margin-top: 30px;
+    padding: 0 30px 15px;
+    background-color: #fff;
+}
+
+.right-part-order-summary div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px dotted #e5e7ea;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right-part-order-summary div span{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 1.43;
+    color: #333;
+}
+
+.right-part-order-summary div a{
+    text-decoration: none;
+    color: #d3d3d3;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 1.43;
+}
+
+.listing-rigtht-part3{
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.rigtht-part-payment, .right-part-address{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    border-top: 2px dotted #e5e7ea;
+}
+
+.rigtht-part-payment-icon span, .rigtht-part-address-icon span{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.rigtht-part-payment-icon a, .rigtht-part-address-icon a{
+    text-decoration: none;   
+}
+
+.rigtht-part-payment-icon a i, .rigtht-part-address-icon a i{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+.listing-show-footer{
+    position: fixed;
+    z-index: 1024;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    justify-content: flex-end;
+    background: #fff;
+    border-top: 2px solid #e5e7ea;
+}
+
+.listing-show-footer-btns{
+    width: 35%;
+    min-width: 500px;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listing-show-footer-btns a{
+    min-width: 100px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 231, 234);
+}
+
+.listing-show-footer-btns a:last-child{
+    background: rgb(8, 160, 92);
+    color: white;
+}

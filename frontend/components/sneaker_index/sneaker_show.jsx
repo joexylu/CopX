@@ -32,8 +32,6 @@ class SneakerShow extends React.Component{
         )
     }
 
-    
-
     render(){
         $(document).ready(function() {   
             $('.show-listing-select-dropbtn').click(function(){

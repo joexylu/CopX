@@ -273,6 +273,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_route_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/route_utils */ "./frontend/util/route_utils.jsx");
 /* harmony import */ var _listingItems_listitems_index_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./listingItems/listitems_index_container */ "./frontend/components/listingItems/listitems_index_container.jsx");
 /* harmony import */ var _listingItems_listingItem_show_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./listingItems/listingItem_show_container */ "./frontend/components/listingItems/listingItem_show_container.jsx");
+/* harmony import */ var _more_comming__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./more_comming */ "./frontend/components/more_comming.jsx");
+
 
 
 
@@ -302,6 +304,7 @@ var App = function App() {
     path: "/sneakers/:sneakerId",
     component: _sneaker_index_sneaker_show_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
+    exact: true,
     path: "/sneakers",
     component: _sneaker_index_sneaker_index_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
@@ -488,7 +491,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.aj6URL,
         id: "aj6-pic"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Buy & Sell ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Authentic Sneakers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-category-selector"
@@ -656,6 +659,8 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      // debugger
+      var item = this.props.item;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listing-index-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -678,7 +683,91 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
         href: ""
       }, "FAQ"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listing-show-body"
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-left-part"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-left-part-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, item.sneakerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "left-part-head-bidding-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Highest Bid: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "$---"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " | Lowest Ask: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "$", item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "left-part-head-size"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "U.S. Size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, item.size))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-left-part-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: item.photoUrl,
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-rigtht-part"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-rigtht-part1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers/".concat(item.sneaker_id)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "U.S. Size ", item.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-pencil-alt"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-rigtht-part2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-buybid-switch"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "Place Bid"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Buy Now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-price-amount"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-bid-warning"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "You are about to purchase this product at the lowest Ask price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-affirm-promo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "Buy Now"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " as low as $49/mo with Affirm. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, " Prequalify now", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-question-circle"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary-shipping"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Shipping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$13.95")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary-tax"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Sales Tax"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$", (parseFloat(item.price) * 0.085).toFixed(2))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary-authfee"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Authentication Fee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Free")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary-discount"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Discount Code"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "Add Discount +")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-order-summary-total"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$", (parseFloat(item.price) * 1.085 + 13.95).toFixed(2))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-rigtht-part3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rigtht-part-payment"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rigtht-part-payment-icon"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-credit-card"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Card ending in XXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-pencil-alt"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "right-part-address"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rigtht-part-address-icon"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-home"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "XXXXXXXXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-pencil-alt"
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-show-footer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "listing-show-footer-btns"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers/".concat(item.sneaker_id),
+        className: "listing-show-footer-btns-cancel"
+      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "Purcahse"))));
     }
   }]);
 
@@ -798,17 +887,7 @@ var ListingItemsIndex = /*#__PURE__*/function (_React$Component) {
         id: "list-index-page-navbar-contain"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: ""
-      }, "FAQ"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "listing-index-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "listing-right-part"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
-      }, item)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "listing-left-part"
-      })));
+      }, "FAQ"))));
     }
   }]);
 
@@ -854,6 +933,90 @@ var mDTP = function mDTP(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_listingItems_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/more_comming.jsx":
+/*!**********************************************!*\
+  !*** ./frontend/components/more_comming.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var MoreComming = /*#__PURE__*/function (_React$Component) {
+  _inherits(MoreComming, _React$Component);
+
+  function MoreComming(props) {
+    var _this;
+
+    _classCallCheck(this, MoreComming);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MoreComming).call(this, props));
+    _this.state = {
+      redirect: false
+    };
+    return _this;
+  }
+
+  _createClass(MoreComming, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.id = setTimeout(function () {
+        return _this2.setState({
+          redirect: true
+        });
+      }, 2000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearTimeout(this.id);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return this.state.redirect ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+        to: "/"
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: ""
+      });
+    }
+  }]);
+
+  return MoreComming;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (MoreComming);
 
 /***/ }),
 

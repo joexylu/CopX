@@ -40,7 +40,6 @@ class Homepage extends React.Component{
                 </div>
                 <div className="homepage-aj6">
                     <img src={window.aj6URL} id="aj6-pic"/>
-                    <h1>Buy & Sell <br/>Authentic Sneakers</h1>
                 </div>
                 <div className="homepage-body">
                     <div className="homepage-category-selector">
