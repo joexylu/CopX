@@ -456,6 +456,21 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getAllSneakers();
+      var imageSources = ["./homepage-ads4.jpg", "./homepage-ads2.jpg", "./homepage-ads.jpg", "./homepage-ads5.jpg"];
+      var index = 0;
+      this.timeout = setInterval(function () {
+        if (index === imageSources.length) {
+          index = 0;
+        }
+
+        document.getElementById("homepage-ads").src = imageSources[index];
+        index++;
+      }, 3000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.timeout);
     }
   }, {
     key: "render",
@@ -469,16 +484,6 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
       });
       var selectedSneaker1 = sneaker.slice(2, 7);
       var selectedSneaker2 = sneaker.slice(7, 12);
-      var imageSources = ["./homepage-ads.jpg", "./homepage-ads2.jpg", "./homepage-ads4.jpg", "./homepage-ads5.jpg"];
-      var index = 0;
-      setInterval(function () {
-        if (index === imageSources.length) {
-          index = 0;
-        }
-
-        document.getElementById("homepage-ads").src = imageSources[index];
-        index++;
-      }, 3000);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

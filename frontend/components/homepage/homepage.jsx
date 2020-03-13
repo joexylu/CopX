@@ -11,7 +11,23 @@ class Homepage extends React.Component{
 
     componentDidMount(){
         this.props.getAllSneakers()
+
+        const imageSources = ["./homepage-ads4.jpg", "./homepage-ads2.jpg", "./homepage-ads.jpg", "./homepage-ads5.jpg"]
+        let index = 0;
+        this.timeout = setInterval(function(){
+            if (index === imageSources.length) {
+                index = 0;
+            }
+            document.getElementById("homepage-ads").src = imageSources[index];
+            index++;
+        } , 3000);
     }
+
+    componentWillUnmount() {
+        clearInterval(this.timeout);
+    }
+
+
     
     render(){
 
@@ -23,17 +39,6 @@ class Homepage extends React.Component{
 
         const selectedSneaker1 = sneaker.slice(2, 7)
         const selectedSneaker2 = sneaker.slice(7,12)
-
-        const imageSources = ["./homepage-ads.jpg", "./homepage-ads2.jpg", "./homepage-ads4.jpg", "./homepage-ads5.jpg"]
-
-        let index = 0;
-        setInterval(function(){
-            if (index === imageSources.length) {
-                index = 0;
-            }
-            document.getElementById("homepage-ads").src = imageSources[index];
-            index++;
-        } , 3000);
 
         return(
             <div className="homepage">
