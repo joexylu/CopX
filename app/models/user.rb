@@ -5,6 +5,15 @@ class User < ApplicationRecord
 
     before_validation :ensure_session_token
 
+    has_many :following,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Follow
+
+    has_many :following_sneakers,
+        through: :following,
+        source: :sneaker
+
     attr_reader :password
 
     def ensure_session_token

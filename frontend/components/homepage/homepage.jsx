@@ -29,9 +29,9 @@ class Homepage extends React.Component{
     
     render(){
 
-        const sneaker = this.props.sneakers.map(sneaker => (
+        const sneaker = this.props.sneakers.map((sneaker,idx) => (
             <div className="homepage-sneakers">
-                <SneakerIndexItem sneaker={sneaker}/>
+                <SneakerIndexItem key={idx} sneaker={sneaker}/>
             </div>
         ))
 

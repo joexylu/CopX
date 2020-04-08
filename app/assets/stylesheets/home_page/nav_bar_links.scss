@@ -32,6 +32,12 @@
     text-decoration: none;
 }
 
+.accountdrop-list a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
 .navbar-account-dropdown:hover .accountdrop-list{
     display: block;
 }

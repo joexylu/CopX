@@ -7,7 +7,7 @@ export const NavBar = ({currentUser, logout}) => {
     const display = currentUser ? (
             <div className="navbar-account-dropdown">
                 Account
-                <AccountDropdown logout={logout} />
+                <AccountDropdown currentUser={currentUser} logout={logout} />
             </div>
         ) : (
         <div className="navbar-no-account-dropdown">
@@ -22,24 +22,24 @@ export const NavBar = ({currentUser, logout}) => {
     return (
         <div className="navbar-element">
 
-            <div>
+            {/* <div>
                 <a href="">Browse</a>
+            </div> */}
+            <div>
+                <a href="https://www.linkedin.com/in/joe-xiyang-lu-838459168/">LinkedIn</a>
             </div>
             <div>
-                <a href="https://stockx.com/news/">News</a>
+                <a href="https://github.com/joexylu">GitHub</a>
             </div>
             <div>
-                <a href="https://stockx.com/text-me-the-app">App</a>
+                <a href="https://angel.co/u/joe-xiyang-lu">AngelList</a>
             </div>
-            <div>
-                <a href="https://stockx.com/portfolios">Portfolios</a>
-            </div>
-            <div>
+            {/* <div>
                 <a href="">About</a>
             </div>
             <div>
                 <a href="">Help</a>
-            </div>
+            </div> */}
             <div>
                 {display}
             </div>

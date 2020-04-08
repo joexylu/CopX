@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     # get "/sneakers/brands", to: "anime#brands"
 
     resources :listingitems, only: [:show, :destroy]
+
+    resources :follows, only: [:create, :destroy]
   end
 
   root to: 'static_pages#root'
