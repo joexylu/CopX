@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
     resources :listingitems, only: [:show, :destroy]
 
-    resources :follows, only: [:create, :destroy]
+    resources :follows, only: [:create]
+    delete '/follows', to: 'follows#destroy'
   end
 
   root to: 'static_pages#root'

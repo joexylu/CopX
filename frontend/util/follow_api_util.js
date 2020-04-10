@@ -8,7 +8,7 @@ export const postFollow = (id) => {
 
 export const destoryFollow = (id) => {
     return $.ajax({
-        url: `api/follows/${id}`,
+        url: `api/follows`,
         method: "DELETE",
         data: {id}
     })

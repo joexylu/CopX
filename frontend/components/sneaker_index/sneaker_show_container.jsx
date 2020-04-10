@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SneakerShow from './sneaker_show';
-import {getSneaker} from '../../actions/sneaker_actions';
-import {getAllListingitems} from '../../actions/listingitem_actions'
+import {getSneaker, followSneaker, unFollowSneaker} from '../../actions/sneaker_actions';
+import {getAllListingitems} from '../../actions/listingitem_actions';
 
 const mSTP = (state, ownProps) => {
     // debugger
@@ -15,7 +15,9 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         getSneaker: sneakerId => dispatch(getSneaker(sneakerId)),
-        getListingItems: sneakerId => dispatch(getAllListingitems(sneakerId))
+        getListingItems: sneakerId => dispatch(getAllListingitems(sneakerId)),
+        followSneaker: sneakerId => dispatch(followSneaker(sneakerId)),
+        unFollowSneaker: sneakerId => dispatch(unFollowSneaker(sneakerId))
     }
 }
 

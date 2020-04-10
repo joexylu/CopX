@@ -4,7 +4,7 @@ class Api::FollowsController < ApplicationController
         @follow.user_id = current_user.id
         @follow.sneaker_id = params[:id]
         if @follow.save
-            @chirp = @follow.chirp
+            @sneaker = @follow.sneaker
             render 'api/sneakers/show'
         else
             render json: @follow.errors.full_messages, status: 401

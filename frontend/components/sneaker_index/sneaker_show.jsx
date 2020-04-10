@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBarContainer from "../navbar/navbar_container"
 import Footer from "../footer/footer"
 // import ListItemsIndexContainer from "../listingItems/listitems_index_container"
+import SneakerFollowButton from "./sneaker_show_follow";
 
 class SneakerShow extends React.Component{
     constructor(props){
@@ -39,6 +40,7 @@ class SneakerShow extends React.Component{
             });
         });
         const items = this.props.ListingItems
+
         return(
             <div className="sneaker-show-page">
                 <div className="homepage-nav-bar" id="index-show-nav">
@@ -78,18 +80,19 @@ class SneakerShow extends React.Component{
                                         <a href="#"><i className="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
-                                <button className="show-head-button">
+                                {/* <button className="show-head-button">
                                     <span>
                                         <i className="fas fa-plus"></i>
                                         PORTFOLIO
                                     </span>
-                                </button>
-                                <button className="show-head-button">
+                                </button> */}
+                                <SneakerFollowButton sneaker={this.props.sneaker} followSneaker={this.props.followSneaker} unFollowSneaker={this.props.unFollowSneaker}/>
+                                {/* <button className="show-head-button">
                                     <span>
                                         <i className="fas fa-plus"></i>
                                         FOLLOW
                                     </span> 
-                                </button>
+                                </button> */}
                             </div>
                         </div>
 
