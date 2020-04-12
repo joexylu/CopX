@@ -86,7 +86,7 @@ class SneakerShow extends React.Component{
                                         PORTFOLIO
                                     </span>
                                 </button> */}
-                                <SneakerFollowButton sneaker={this.props.sneaker} followSneaker={this.props.followSneaker} unFollowSneaker={this.props.unFollowSneaker}/>
+                                <SneakerFollowButton sneaker={this.props.sneaker} followSneaker={this.props.followSneaker} unFollowSneaker={this.props.unFollowSneaker} isCurrentUser={this.props.isCurrentUser}/>
                                 {/* <button className="show-head-button">
                                     <span>
                                         <i className="fas fa-plus"></i>

@@ -4,8 +4,8 @@ import {getSneaker, followSneaker, unFollowSneaker} from '../../actions/sneaker_
 import {getAllListingitems} from '../../actions/listingitem_actions';
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
+        isCurrentUser: !!state.session.id,
         sneaker: state.entities.sneakers[ownProps.match.params.sneakerId] || {},
         sneakerId: ownProps.match.params.sneakerId || null,
         ListingItems: Object.values(state.entities.listingItems)

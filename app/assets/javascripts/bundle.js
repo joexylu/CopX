@@ -1930,7 +1930,8 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sneaker_show_follow__WEBPACK_IMPORTED_MODULE_4__["default"], {
         sneaker: this.props.sneaker,
         followSneaker: this.props.followSneaker,
-        unFollowSneaker: this.props.unFollowSneaker
+        unFollowSneaker: this.props.unFollowSneaker,
+        isCurrentUser: this.props.isCurrentUser
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-body-head-name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.sneaker.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2045,8 +2046,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state, ownProps) {
-  // debugger
   return {
+    isCurrentUser: !!state.session.id,
     sneaker: state.entities.sneakers[ownProps.match.params.sneakerId] || {},
     sneakerId: ownProps.match.params.sneakerId || null,
     ListingItems: Object.values(state.entities.listingItems)
@@ -2090,7 +2091,8 @@ __webpack_require__.r(__webpack_exports__);
 var SneakerFollowButton = function SneakerFollowButton(_ref) {
   var sneaker = _ref.sneaker,
       followSneaker = _ref.followSneaker,
-      unFollowSneaker = _ref.unFollowSneaker;
+      unFollowSneaker = _ref.unFollowSneaker,
+      isCurrentUser = _ref.isCurrentUser;
   var followButtonText = "Follow";
 
   var followButtonAction = function followButtonAction() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SneakerFollowButton = ({ sneaker, followSneaker, unFollowSneaker }) => {
+const SneakerFollowButton = ({ sneaker, followSneaker, unFollowSneaker, isCurrentUser }) => {
     let followButtonText = "Follow";
     let followButtonAction = () => followSneaker(sneaker.id);
     if (sneaker.followed_by_current_user) {
