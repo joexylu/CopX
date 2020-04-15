@@ -8,8 +8,6 @@ const SneakerIndexItem = props => {
                     <img src={props.sneaker.photoUrl} className="index-items-img"/>
                     <div className="index-items-info">
                         <h2>{props.sneaker.name}</h2>
-                        <p>Lowest Ask</p>
-                        <h1>Price</h1>
                     </div>
                 </div>
             </Link>    

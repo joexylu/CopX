@@ -21,6 +21,7 @@ class Homepage extends React.Component{
             document.getElementById("homepage-ads").src = imageSources[index];
             index++;
         } , 3000);
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount() {

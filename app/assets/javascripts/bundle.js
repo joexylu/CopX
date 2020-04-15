@@ -279,6 +279,38 @@ var unFollowSneaker = function unFollowSneaker(id) {
 
 /***/ }),
 
+/***/ "./frontend/actions/user_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/user_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_USER, getUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USER", function() { return RECEIVE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUser", function() { return getUser; });
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
+
+var RECEIVE_USER = "RECEIVE_USER";
+
+var receiveUser = function receiveUser(user) {
+  return {
+    type: RECEIVE_USER,
+    user: user
+  };
+};
+
+var getUser = function getUser(UserId) {
+  return function (dispatch) {
+    return Object(_util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUser"])(UserId).then(function (response) {
+      return dispatch(receiveUser(response));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/App.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/App.jsx ***!
@@ -497,6 +529,7 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
         document.getElementById("homepage-ads").src = imageSources[index];
         index++;
       }, 3000);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "componentWillUnmount",
@@ -1548,6 +1581,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getAllSneakers();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "handleGetBrand",
@@ -1612,7 +1646,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
         id: "redirect-to-sneaker"
       }, "SNEAKERS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "STREETWEAR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "COLLECTIBLES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "HANDBAGS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WATCHES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sidebar-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "BELOW RETAIL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "BRANDS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sidebar-7"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleAllBrand
@@ -1622,61 +1656,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
       }, "ADIDAS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleGetBrand,
         value: "Air Jordan"
-      }, "AIR JORDAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "NIKE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-body-sidebar-3"
-      }, "SIZE TYPE", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Child")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Preschool")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Infant")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-sidebar-checkbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Toddler"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-body-sidebar-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "SIZES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "1.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "2.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "3.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "4.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "5.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "6"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "6.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "7.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "8.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "9"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "9.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "11"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "12"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "13"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "14"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "15"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "16"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-body-sidebar-5"
-      }, "PRICES", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Under $100")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "$100 - $200")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "$200 - $300")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "$300 - $400")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "$400 - $500")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "$500 +"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "index-body-sidebar-6"
-      }, "RELEASE YEARS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " before 2001 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "2001 - $2005")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "2005 - 2010")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "2010 - 2015")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "2015 - 2020"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "AIR JORDAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "NIKE")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sneakers"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-body-sneakers-head"
@@ -1774,7 +1754,7 @@ var SneakerIndexItem = function SneakerIndexItem(props) {
     className: "index-items-img"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "index-items-info"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.sneaker.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lowest Ask"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Price"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.sneaker.name))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SneakerIndexItem);
@@ -1844,6 +1824,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       this.props.getListingItems(this.props.sneakerId);
       this.props.getSneaker(this.props.sneakerId);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "handleClick",
@@ -2161,6 +2142,39 @@ var SneakerFollowButton = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/components/user_page/user_follow_items.jsx":
+/*!*************************************************************!*\
+  !*** ./frontend/components/user_page/user_follow_items.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var FollowingItems = function FollowingItems(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/sneakers/".concat(props.sneaker.id),
+    className: "user-follow-link"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user-follow-link-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.sneaker.photoUrl,
+    className: "user-follow-link-img"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user-follow-link-info"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.sneaker.name))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FollowingItems);
+
+/***/ }),
+
 /***/ "./frontend/components/user_page/user_show.jsx":
 /*!*****************************************************!*\
   !*** ./frontend/components/user_page/user_show.jsx ***!
@@ -2174,6 +2188,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.jsx");
+/* harmony import */ var _user_follow_items__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user_follow_items */ "./frontend/components/user_page/user_follow_items.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2196,6 +2211,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var UserShow = /*#__PURE__*/function (_React$Component) {
   _inherits(UserShow, _React$Component);
 
@@ -2207,11 +2223,15 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
 
   _createClass(UserShow, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-show-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar",
         id: "index-show-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2231,7 +2251,15 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links",
         id: "index-show-page-navbar-contain"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-showpage-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-showbody-userinfo"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-showbody-follow"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-showbody-bought"
+      })));
     }
   }]);
 
@@ -2252,22 +2280,29 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _user_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user_show */ "./frontend/components/user_page/user_show.jsx");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _user_show__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user_show */ "./frontend/components/user_page/user_show.jsx");
+
  // import {getListingitem} from "../../actions/listingitem_actions";
 
 
 
 var mSTP = function mSTP(state, ownProps) {
   return {
-    user: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id],
+    followingSneakers: state.entities.users[state.session.id].following_sneakers || []
   };
 };
 
 var mDTP = function mDTP(dispatch) {
-  return {};
+  return {
+    getUser: function getUser(UserId) {
+      return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["getUser"])(UserId));
+    }
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user_show__WEBPACK_IMPORTED_MODULE_1__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user_show__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
@@ -2781,6 +2816,25 @@ var fetchSneakerByBrand = function fetchSneakerByBrand(brand) {
     data: {
       brand: brand
     }
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/user_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/user_api_util.js ***!
+  \****************************************/
+/*! exports provided: fetchUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
+var fetchUser = function fetchUser(UserId) {
+  return $.ajax({
+    method: "GET",
+    url: "/api/users/".concat(UserId)
   });
 };
 

@@ -19,6 +19,7 @@ class SneakerShow extends React.Component{
     componentDidMount(){
         this.props.getListingItems(this.props.sneakerId)
         this.props.getSneaker(this.props.sneakerId)  
+        window.scrollTo(0, 0)
     }
 
     handleClick(e){

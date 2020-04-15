@@ -51,18 +51,22 @@
 
 .index-one-item-div{
     width: 100%;
+    border: solid 1px #f6f6f6;
 
 }
 .index-items-img{
     width: 100%;
-    border: solid 1px #f6f6f6;
+    // height: 150px;
+    min-height: auto;
 }
 .index-items-info{
     padding: 16px;
     font-family: sans-serif;
     color: black;
     background-color: #f6f6f6;
-    border: solid 2px #f6f6f6;
+    // border: solid 1px #f6f6f6;
+    height: 75px;
+    min-height: 70px;
 }
 
 .index-items-info h1, .index-items-info h2, .index-items-info p{

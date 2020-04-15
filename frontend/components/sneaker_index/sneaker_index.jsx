@@ -13,6 +13,7 @@ class SneakersIndex extends React.Component{
 
     componentDidMount(){
         this.props.getAllSneakers()
+        window.scrollTo(0, 0)
     }
 
     handleGetBrand(e){
@@ -78,7 +79,7 @@ class SneakersIndex extends React.Component{
                                 </div>
                             </div>
                             <div className="index-body-sidebar-2">
-                                <div>BELOW RETAIL</div>
+                                <div>BRANDS</div>
                             </div>
                             <div className="index-body-sidebar-7">
                                 <button onClick={this.handleAllBrand}>
@@ -94,7 +95,7 @@ class SneakersIndex extends React.Component{
                                     NIKE
                                 </button>
                             </div>
-                            <div className="index-body-sidebar-3">SIZE TYPE
+                            {/* <div className="index-body-sidebar-3">SIZE TYPE
                                 <div className="index-sidebar-checkbox"> 
                                     <input type="checkbox"/>
                                     <p>Men</p>
@@ -198,7 +199,7 @@ class SneakersIndex extends React.Component{
                                         <input type="checkbox"/>
                                         <label>2015 - 2020</label>
                                     </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="index-body-sneakers">

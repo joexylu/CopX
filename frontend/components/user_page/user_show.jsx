@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from "../navbar/navbar_container"
+import FollowingItems from "./user_follow_items"
 
 
 class UserShow extends React.Component{
@@ -9,12 +10,12 @@ class UserShow extends React.Component{
     }
 
     componentDidMount(){
-        
+        window.scrollTo(0, 0)
     }
 
     render(){
         return(
-            <div>
+            <div className="user-show-page">
                 <div className="homepage-nav-bar" id="index-show-nav">
                     <div className="homepage-nav-bar-logo" id="index-show-navbar-logo-search">
                         <Link to="/" className="homepage-nav-bar-logo-link" id="logo-indexshow">
@@ -27,8 +28,16 @@ class UserShow extends React.Component{
                         <NavBarContainer />
                     </div>
                 </div>
-                <div>
+                <div className="user-showpage-body">
+                    <div className="user-showbody-userinfo">
 
+                    </div>
+                    <div className="user-showbody-follow">
+
+                    </div>
+                    <div className="user-showbody-bought">
+
+                    </div>
                 </div>
             </div>
         )
