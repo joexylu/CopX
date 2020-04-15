@@ -10,6 +10,11 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Follow
 
+    has_many :purchaseditems,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Purchaseditem
+
     has_many :following_sneakers,
         through: :following,
         source: :sneaker

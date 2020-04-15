@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_232527) do
+ActiveRecord::Schema.define(version: 2020_04_15_063424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,15 +54,27 @@ ActiveRecord::Schema.define(version: 2020_04_07_232527) do
     t.index ["sneaker_id"], name: "index_listingitems_on_sneaker_id"
   end
 
+  create_table "purchaseditems", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "sneaker_id", null: false
+    t.float "size", null: false
+    t.integer "price", null: false
+    t.string "order_number", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sneaker_id"], name: "index_purchaseditems_on_sneaker_id"
+    t.index ["user_id"], name: "index_purchaseditems_on_user_id"
+  end
+
   create_table "sneakers", force: :cascade do |t|
     t.string "name", null: false
     t.string "brand", null: false
     t.string "style", null: false
     t.string "ticker", null: false
-    t.text "description"
-    t.date "release_date", null: false
     t.string "colorway", null: false
     t.string "retail_price", null: false
+    t.text "description"
+    t.string "release_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand"], name: "index_sneakers_on_brand"
