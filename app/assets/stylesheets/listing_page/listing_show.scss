@@ -279,7 +279,7 @@
 }
 
 .listing-show-footer-btns a{
-    min-width: 100px;
+    min-width: 90px;
     font-family: sans-serif;
     font-weight: 500;
     text-align: center;
@@ -294,7 +294,21 @@
     border-color: rgb(229, 231, 234);
 }
 
-.listing-show-footer-btns a:last-child{
+.listing-show-footer-btns-purchase{
+    height: 42px;
+    width: 128px;
+    min-width: 90px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 231, 234);
     background: rgb(8, 160, 92);
     color: white;
 }
+

@@ -1071,7 +1071,8 @@ var ItemPurchaseButton = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleClick
+        onClick: this.handleClick,
+        className: "listing-show-footer-btns-purchase"
       }, "Purcahse");
     }
   }]);
@@ -1214,6 +1215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1235,6 +1237,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var PurchasedItemShow = /*#__PURE__*/function (_React$Component) {
   _inherits(PurchasedItemShow, _React$Component);
 
@@ -1248,6 +1251,7 @@ var PurchasedItemShow = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getPurchased(this.props.purchaseId);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
@@ -1256,15 +1260,59 @@ var PurchasedItemShow = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "purchaseItem-showpage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "purchaseItem-show-header"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-nav-bar",
+        id: "index-show-nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-nav-bar-logo",
+        id: "index-show-navbar-logo-search"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "homepage-nav-bar-logo-link",
+        id: "logo-indexshow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.coplogoURL,
+        id: "sessionform-coplogo"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        placeholder: "Search for brand, color, etc",
+        id: "search-bar-indexshow"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "homepage-nav-bar-links",
+        id: "index-show-page-navbar-contain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "purchaseItem-show-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-body-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/sneakers/".concat(purchaseditem.sneaker_id),
+        className: "purchaseItem-show-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: purchaseditem.photoUrl,
         className: "purchaseItem-show-img"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, purchaseditem.sneakerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, purchaseditem.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, purchaseditem.order_number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, purchaseditem.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/users/".concat(this.props.userId)
-      }, "User Profile")));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, purchaseditem.sneakerName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-size"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "U.S. Men's Size: ", purchaseditem.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Condition: New"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "100% Authentic")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "purchaseItem-orderNum"
+      }, "Order Number: ", purchaseditem.order_number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "purcahseItem-delivery"
+      }, "Order Processed Successfully")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-body-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-price-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Your Purchase Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$", purchaseditem.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-price-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Shipping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$13.95")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-price-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Sales Tax"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$", purchaseditem.price * 0.08)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-price-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Authentication Fee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-price-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$", purchaseditem.price * 0.08 + purchaseditem.price + 13.95))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "purchaseItem-show-body-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/users/".concat(this.props.userId),
+        className: "purchaseItem-show-userpage"
+      }, "To Order History"))));
     }
   }]);
 

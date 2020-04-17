@@ -27,7 +27,7 @@ class ItemPurchaseButton extends React.Component{
 
     render(){
         return(
-            <button onClick={this.handleClick}>Purcahse</button>
+            <button onClick={this.handleClick} className="listing-show-footer-btns-purchase">Purcahse</button>
         )
     }
 }

@@ -1,0 +1,135 @@
+.purchaseItem-showpage{
+    min-width: 1100px;
+}
+
+.purchaseItem-show-body{
+    margin-top: 95px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.purchaseItem-show-body-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.purchaseItem-show-link{
+    text-decoration: none;
+    font-family: proxima-nova, sans-serif;
+    font-size: 17px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.purchaseItem-show-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.purchaseItem-show-size{
+    margin-top: 4pt;
+    text-transform: capitalize;
+}
+
+.purchaseItem-show-size span{
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.purchaseItem-orderNum{
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.purcahseItem-delivery{
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.purchaseItem-show-body-2{
+    min-width: 260pt;
+    max-width: 400pt;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0 30px 15px;
+    background-color: #fff;
+}
+
+.purchaseItem-show-price-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px dotted #e5e7ea;
+    font-weight: 500;
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+.purchaseItem-show-body-3{
+    max-width: 400pt;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.purchaseItem-show-userpage{
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: 1rem 1.25rem;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(8, 160, 92);
+    position: relative;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    z-index: 1;
+    
+    &:after {
+        border-radius: 2px;
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        right: 1.25rem;
+        left: 1.25rem;
+        background-color: rgb(8, 160, 92);
+        transition: all .3s cubic-bezier(.2, 0, 0, 1);
+        transform-origin: bottom center;
+        z-index: -1;
+    }
+    
+    &:hover {
+        color: white;
+        &:after {
+            right: 0;
+            left: 0;
+            height: 100%;
+      }
+    }
+}
