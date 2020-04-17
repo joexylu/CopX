@@ -1,3 +1,10 @@
+export const fetchUserFollowingItems = () => {
+    return $.ajax({
+        method: "GET",
+        url: `/api/follows`
+    })
+}
+
 export const postFollow = (id) => {
     return $.ajax({
         url: "api/follows",

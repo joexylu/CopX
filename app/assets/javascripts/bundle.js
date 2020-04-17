@@ -86,6 +86,38 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/following_actions.js":
+/*!***********************************************!*\
+  !*** ./frontend/actions/following_actions.js ***!
+  \***********************************************/
+/*! exports provided: RECEIVE_ALL_FOLLOWING, getAllFollowing */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_FOLLOWING", function() { return RECEIVE_ALL_FOLLOWING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllFollowing", function() { return getAllFollowing; });
+/* harmony import */ var _util_follow_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/follow_api_util */ "./frontend/util/follow_api_util.js");
+
+var RECEIVE_ALL_FOLLOWING = "RECEIVE_ALL_FOLLOWING";
+
+var receiveAllFollowing = function receiveAllFollowing(followingItems) {
+  return {
+    type: RECEIVE_ALL_FOLLOWING,
+    followingItems: followingItems
+  };
+};
+
+var getAllFollowing = function getAllFollowing() {
+  return function (dispatch) {
+    return Object(_util_follow_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUserFollowingItems"])().then(function (res) {
+      return dispatch(receiveAllFollowing(res));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/listingitem_actions.js":
 /*!*************************************************!*\
   !*** ./frontend/actions/listingitem_actions.js ***!
@@ -2344,7 +2376,8 @@ __webpack_require__.r(__webpack_exports__);
 var FollowingItems = function FollowingItems(_ref) {
   var sneaker = _ref.sneaker,
       followSneaker = _ref.followSneaker,
-      unFollowSneaker = _ref.unFollowSneaker;
+      unFollowSneaker = _ref.unFollowSneaker,
+      getAllFollowing = _ref.getAllFollowing;
   var followButtonText = "Follow";
 
   var followButtonAction = function followButtonAction() {
@@ -2355,7 +2388,7 @@ var FollowingItems = function FollowingItems(_ref) {
     followButtonText = "Following";
 
     followButtonAction = function followButtonAction() {
-      return unFollowSneaker(sneaker.id);
+      return unFollowSneaker(sneaker.id).then(getAllFollowing());
     };
   }
 
@@ -2458,6 +2491,7 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       window.scrollTo(0, 0);
       this.props.getAllPurchased();
+      this.props.getAllFollowing();
     }
   }, {
     key: "render",
@@ -2466,12 +2500,14 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
           followingSneakers = _this$props.followingSneakers,
           purchasedSneakers = _this$props.purchasedSneakers,
           unFollowSneaker = _this$props.unFollowSneaker,
-          followSneaker = _this$props.followSneaker;
+          followSneaker = _this$props.followSneaker,
+          getAllFollowing = _this$props.getAllFollowing;
       var followingSneaker = followingSneakers.map(function (sneaker) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_user_follow_items__WEBPACK_IMPORTED_MODULE_3__["default"], {
           sneaker: sneaker,
           unFollowSneaker: unFollowSneaker,
-          followSneaker: followSneaker
+          followSneaker: followSneaker,
+          getAllFollowing: getAllFollowing
         });
       });
       var PurchasedSneaker = purchasedSneakers.map(function (purchasedItem) {
@@ -2532,8 +2568,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 /* harmony import */ var _actions_purchase_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/purchase_actions */ "./frontend/actions/purchase_actions.js");
-/* harmony import */ var _actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/sneaker_actions */ "./frontend/actions/sneaker_actions.js");
-/* harmony import */ var _user_show__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user_show */ "./frontend/components/user_page/user_show.jsx");
+/* harmony import */ var _actions_following_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/following_actions */ "./frontend/actions/following_actions.js");
+/* harmony import */ var _actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/sneaker_actions */ "./frontend/actions/sneaker_actions.js");
+/* harmony import */ var _user_show__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user_show */ "./frontend/components/user_page/user_show.jsx");
+
 
 
 
@@ -2543,7 +2581,7 @@ __webpack_require__.r(__webpack_exports__);
 var mSTP = function mSTP(state, ownProps) {
   return {
     user: state.entities.users[state.session.id],
-    followingSneakers: state.entities.users[state.session.id].following_sneakers || [],
+    followingSneakers: state.entities.followingItem.following_sneakers || [],
     purchasedSneakers: state.entities.purchasedItem.purchased_sneakers || []
   };
 };
@@ -2556,16 +2594,19 @@ var mDTP = function mDTP(dispatch) {
     getAllPurchased: function getAllPurchased() {
       return dispatch(Object(_actions_purchase_actions__WEBPACK_IMPORTED_MODULE_2__["getAllPurchased"])());
     },
+    getAllFollowing: function getAllFollowing() {
+      return dispatch(Object(_actions_following_actions__WEBPACK_IMPORTED_MODULE_3__["getAllFollowing"])());
+    },
     unFollowSneaker: function unFollowSneaker(sneakerId) {
-      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_3__["unFollowSneaker"])(sneakerId));
+      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_4__["unFollowSneaker"])(sneakerId));
     },
     followSneaker: function followSneaker(sneakerId) {
-      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_3__["followSneaker"])(sneakerId));
+      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_4__["followSneaker"])(sneakerId));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user_show__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user_show__WEBPACK_IMPORTED_MODULE_5__["default"]));
 
 /***/ }),
 
@@ -2630,6 +2671,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sneaker_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sneaker_reducer */ "./frontend/reducers/sneaker_reducer.js");
 /* harmony import */ var _listingitem_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./listingitem_reducer */ "./frontend/reducers/listingitem_reducer.js");
 /* harmony import */ var _purchaseditem_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./purchaseditem_reducer */ "./frontend/reducers/purchaseditem_reducer.js");
+/* harmony import */ var _followingitem_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./followingitem_reducer */ "./frontend/reducers/followingitem_reducer.js");
+
 
 
 
@@ -2639,6 +2682,7 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["usersReducer"],
   sneakers: _sneaker_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   listingItems: _listingitem_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  followingItem: _followingitem_reducer__WEBPACK_IMPORTED_MODULE_5__["default"],
   purchasedItem: _purchaseditem_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
@@ -2662,6 +2706,37 @@ var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
   session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["sessionErrorsReducer"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/followingitem_reducer.js":
+/*!****************************************************!*\
+  !*** ./frontend/reducers/followingitem_reducer.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_following_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/following_actions */ "./frontend/actions/following_actions.js");
+
+
+var followingItemReducer = function followingItemReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
+
+  switch (action.type) {
+    case _actions_following_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_FOLLOWING"]:
+      return action.followingItems;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (followingItemReducer);
 
 /***/ }),
 
@@ -2935,13 +3010,20 @@ var configureStore = function configureStore() {
 /*!******************************************!*\
   !*** ./frontend/util/follow_api_util.js ***!
   \******************************************/
-/*! exports provided: postFollow, destoryFollow */
+/*! exports provided: fetchUserFollowingItems, postFollow, destoryFollow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUserFollowingItems", function() { return fetchUserFollowingItems; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postFollow", function() { return postFollow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destoryFollow", function() { return destoryFollow; });
+var fetchUserFollowingItems = function fetchUserFollowingItems() {
+  return $.ajax({
+    method: "GET",
+    url: "/api/follows"
+  });
+};
 var postFollow = function postFollow(id) {
   return $.ajax({
     url: "api/follows",

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FollowingItems = ({ sneaker, followSneaker, unFollowSneaker}) => {
+const FollowingItems = ({ sneaker, followSneaker, unFollowSneaker, getAllFollowing}) => {
     let followButtonText = "Follow";
     let followButtonAction = () => followSneaker(sneaker.id);
     if (sneaker.followed_by_current_user) {
         followButtonText = "Following";
-        followButtonAction = () => unFollowSneaker(sneaker.id);
+        followButtonAction = () => unFollowSneaker(sneaker.id).then(getAllFollowing())
     }
     return(
         <div>

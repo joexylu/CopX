@@ -13,12 +13,13 @@ class UserShow extends React.Component{
     componentDidMount(){
         window.scrollTo(0, 0)
         this.props.getAllPurchased()
+        this.props.getAllFollowing()
     }
 
     render(){
-        const{followingSneakers, purchasedSneakers, unFollowSneaker, followSneaker } = this.props
+        const{followingSneakers, purchasedSneakers, unFollowSneaker, followSneaker, getAllFollowing } = this.props
         const followingSneaker = followingSneakers.map(sneaker => (
-            <FollowingItems sneaker={sneaker} unFollowSneaker={unFollowSneaker} followSneaker={followSneaker}/>
+            <FollowingItems sneaker={sneaker} unFollowSneaker={unFollowSneaker} followSneaker={followSneaker} getAllFollowing={getAllFollowing}/>
         ))
         const PurchasedSneaker = purchasedSneakers.map(purchasedItem => (
             <PurchasedItems purchasedItem={purchasedItem}/>

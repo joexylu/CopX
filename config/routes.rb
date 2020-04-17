@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
     resources :listingitems, only: [:show, :destroy]
 
-    resources :follows, only: [:create]
+    resources :follows, only: [:index, :create]
     delete '/follows', to: 'follows#destroy'
 
     resources :purchaseditems, only: [:index, :show, :create]
