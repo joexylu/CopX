@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Homepage from './homepage'
-import { getAllSneakers } from "../../actions/sneaker_actions"
+import { getAllSneakers, getAllSneakersByBrand } from "../../actions/sneaker_actions"
 
-const mSTP = state => {
+const mSTP = (state,ownProps) => {
     return ({
         sneakers: Object.values(state.entities.sneakers)
     })
 }
 
 const mDTP = dispatch => ({
-    getAllSneakers: () => dispatch(getAllSneakers())
+    getAllSneakers: () => dispatch(getAllSneakers()),
+    getAllSneakersByBrand: (brand) => dispatch(getAllSneakersByBrand(brand))
 })
 
 export default connect(mSTP,mDTP)(Homepage);

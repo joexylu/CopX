@@ -1,0 +1,144 @@
+.user-show-page{
+    min-width: 1100px;
+}
+
+.user-showpage-body{
+    margin-top: 97px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+.user-showbody-userinfo{
+    width: 100%;
+    margin-top: 95px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 2px #535353;
+}
+
+.fa-user-circle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user-showbody-userinfo span{
+    text-decoration: none;
+    font-family: proxima-nova, sans-serif;
+    font-size: 25px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.user-showpage-body-content{
+    display: flex;
+}
+
+.user-showbody-follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.user-follow-link-title{
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    border-bottom: 2px #464646;
+}
+
+.user-following-items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.user-following-items:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.user-follow-link{
+    display: flex;
+    justify-content: flex-start;
+    width: 55%;
+    align-items: center;
+    font-weight: 500;
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.user-follow-link-img{
+    width: 30%;
+    min-height: 48px;
+    margin-right: 10px;
+}
+
+.user-following-items button{
+    margin-right: 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    height: 80%;
+}
+
+.user-following-items button:hover{
+    background-color: rgb(202, 17, 54);
+}
+
+
+.user-showbody-bought{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.user-ordered-items{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    align-items: center;
+    font-weight: 500;
+    font-family: proxima-nova, sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.user-ordered-items:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.user-ordered-items-name{
+    font-size: 15px;
+}
+
+.user-ordered-items-img{
+    min-height: 45px;
+    margin-right: 10px;
+    width: 15%;
+}

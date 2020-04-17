@@ -40,13 +40,18 @@ class UserShow extends React.Component{
                 </div>
                 <div className="user-showpage-body">
                     <div className="user-showbody-userinfo">
-                        {this.props.user.username}
+                        <i className="fas fa-user-circle fa-5x"></i>
+                        <span>{this.props.user.username}</span>
                     </div>
-                    <div className="user-showbody-follow">
-                        {followingSneaker}
-                    </div>
-                    <div className="user-showbody-bought">
-                        {PurchasedSneaker}
+                    <div className="user-showpage-body-content">
+                        <div className="user-showbody-follow">
+                            <span className="user-follow-link-title" >Following:</span>
+                            {followingSneaker}
+                        </div>
+                        <div className="user-showbody-bought">
+                            <span className="user-follow-link-title">Order History:</span>
+                            {PurchasedSneaker}
+                        </div>
                     </div>
                 </div>
             </div>

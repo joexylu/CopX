@@ -49,7 +49,7 @@ class SneakerShow extends React.Component{
                         <Link to="/" className="homepage-nav-bar-logo-link" id="logo-indexshow">
                             <img src={window.coplogoURL} id="sessionform-coplogo"/>
                         </Link>
-                        <input type="text" placeholder="Search for brand, color, etc" id="search-bar-indexshow"/>
+                        {/* <input type="text" placeholder="Search for brand, color, etc" id="search-bar-indexshow"/> */}
                     </div>
                     
                     <div className="homepage-nav-bar-links" id="index-show-page-navbar-contain">

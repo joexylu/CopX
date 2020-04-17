@@ -586,9 +586,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -604,9 +604,13 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
   _inherits(Homepage, _React$Component);
 
   function Homepage(props) {
+    var _this;
+
     _classCallCheck(this, Homepage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Homepage).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Homepage).call(this, props));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Homepage, [{
@@ -629,6 +633,13 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       clearInterval(this.timeout);
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(e) {
+      e.preventDefault();
+      var brand = e.currentTarget.value;
+      this.props.history.push("/sneakers");
     }
   }, {
     key: "render",
@@ -689,28 +700,36 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
         className: "homepage-view-all-sneaker"
       }, "See All")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "homepage-brands-place"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleClick,
+        value: "Air Jordan",
         className: "home-page-brands"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.ajhomepageURL,
         id: "homepage-brand-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "home-page-brands-name"
-      }, "Jordan")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Jordan")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleClick,
+        value: "Nike",
         className: "home-page-brands"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.nikehomepageURL,
         id: "homepage-brand-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "home-page-brands-name"
-      }, "Nike")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Nike")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleClick,
+        value: "Adidas",
         className: "home-page-brands"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.adidashomepageURL,
         id: "homepage-brand-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "home-page-brands-name"
-      }, "Adidas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Adidas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleClick,
+        value: "adidas Yeezy",
         className: "home-page-brands"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.yeezyhomepageURL,
@@ -765,7 +784,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mSTP = function mSTP(state) {
+var mSTP = function mSTP(state, ownProps) {
   return {
     sneakers: Object.values(state.entities.sneakers)
   };
@@ -775,6 +794,9 @@ var mDTP = function mDTP(dispatch) {
   return {
     getAllSneakers: function getAllSneakers() {
       return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_3__["getAllSneakers"])());
+    },
+    getAllSneakersByBrand: function getAllSneakersByBrand(brand) {
+      return dispatch(Object(_actions_sneaker_actions__WEBPACK_IMPORTED_MODULE_3__["getAllSneakersByBrand"])(brand));
     }
   };
 };
@@ -1102,12 +1124,14 @@ __webpack_require__.r(__webpack_exports__);
 var AccountDropdown = function AccountDropdown(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "accountdrop-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Buying"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Selling"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/users/".concat(props.currentUser.id)
-  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Following"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/users/".concat(props.currentUser.id),
+    id: "accountdrop-list-userprofile"
+  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return props.logout();
-    }
+    },
+    id: "accountdrop-list-session-btn"
   }, "Sign out")));
 };
 
@@ -1161,7 +1185,9 @@ var NavBar = function NavBar(_ref) {
     href: "https://angel.co/u/joe-xiyang-lu"
   }, "AngelList")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, display), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
-  }, "Sell")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-search"
+  }))));
 };
 
 /***/ }),
@@ -1883,11 +1909,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.coplogoURL,
         id: "sessionform-coplogo"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        placeholder: "Search for brand, color, etc",
-        id: "search-bar-indexshow"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links",
         id: "index-show-page-navbar-contain"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2127,11 +2149,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.coplogoURL,
         id: "sessionform-coplogo"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        placeholder: "Search for brand, color, etc",
-        id: "search-bar-indexshow"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links",
         id: "index-show-page-navbar-contain"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2433,24 +2451,22 @@ var FollowingItems = function FollowingItems(_ref) {
   };
 
   if (sneaker.followed_by_current_user) {
-    followButtonText = "Following";
+    followButtonText = "Unfollow";
 
     followButtonAction = function followButtonAction() {
       return unFollowSneaker(sneaker.id).then(getAllFollowing());
     };
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user-following-items"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/".concat(sneaker.id),
     className: "user-follow-link"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user-follow-link-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: sneaker.photoUrl,
     className: "user-follow-link-img"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user-follow-link-info"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, sneaker.name)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, sneaker.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: followButtonAction
   }, followButtonText));
 };
@@ -2476,10 +2492,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var PurchasedItems = function PurchasedItems(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/purchased/".concat(props.purchasedItem.id)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.purchasedItem.photoUrl
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.purchasedItem.sneakerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Order Number: ", props.purchasedItem.order_number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Size: ", props.purchasedItem.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "$", props.purchasedItem.price))));
+    to: "/purchased/".concat(props.purchasedItem.id),
+    className: "user-ordered-items"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.purchasedItem.photoUrl,
+    className: "user-ordered-items-img"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user-ordered-items-info"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "user-ordered-items-name"
+  }, props.purchasedItem.sneakerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Order Number: ", props.purchasedItem.order_number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Size: ", props.purchasedItem.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "$", props.purchasedItem.price)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PurchasedItems);
@@ -2589,11 +2611,19 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
         className: "user-showpage-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-showbody-userinfo"
-      }, this.props.user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-user-circle fa-5x"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-showpage-body-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-showbody-follow"
-      }, followingSneaker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "user-follow-link-title"
+      }, "Following:"), followingSneaker), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-showbody-bought"
-      }, PurchasedSneaker)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "user-follow-link-title"
+      }, "Order History:"), PurchasedSneaker))));
     }
   }]);
 

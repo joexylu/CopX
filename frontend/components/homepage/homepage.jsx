@@ -7,6 +7,7 @@ import Footer from "../footer/footer"
 class Homepage extends React.Component{
     constructor(props){
         super(props)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount(){
@@ -26,6 +27,12 @@ class Homepage extends React.Component{
 
     componentWillUnmount() {
         clearInterval(this.timeout);
+    }
+
+    handleClick(e){
+        e.preventDefault()
+        const brand = e.currentTarget.value
+        this.props.history.push("/sneakers")
     }
     
     render(){
@@ -74,22 +81,22 @@ class Homepage extends React.Component{
                             <Link to="/sneakers" className="homepage-view-all-sneaker">See All</Link>
                         </div>
                         <ul className="homepage-brands-place">
-                            <div className="home-page-brands">
+                            <button onClick={this.handleClick} value={"Air Jordan"} className="home-page-brands" >
                                 <img src={window.ajhomepageURL} id="homepage-brand-img"/>
                                 <span className="home-page-brands-name">Jordan</span>
-                            </div>
-                            <div className="home-page-brands">
+                            </button>
+                            <button onClick={this.handleClick} value={"Nike"} className="home-page-brands" >
                                 <img src={window.nikehomepageURL} id="homepage-brand-img"/>
                                 <span className="home-page-brands-name">Nike</span>
-                            </div>
-                            <div className="home-page-brands">
+                            </button>
+                            <button onClick={this.handleClick} value={"Adidas"} className="home-page-brands" >
                                 <img src={window.adidashomepageURL} id="homepage-brand-img"/>
                                 <span className="home-page-brands-name">Adidas</span>
-                            </div>
-                            <div className="home-page-brands">
+                            </button>
+                            <button onClick={this.handleClick} value={"adidas Yeezy"} className="home-page-brands" >
                                 <img src={window.yeezyhomepageURL} id="homepage-brand-img"/>
                                 <span className="home-page-brands-name">Yeezy</span>
-                            </div>
+                            </button>
                         </ul>
 
                         <div className="homepage-popular-brands-head">

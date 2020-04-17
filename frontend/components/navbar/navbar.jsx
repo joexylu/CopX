@@ -21,10 +21,6 @@ export const NavBar = ({currentUser, logout}) => {
 
     return (
         <div className="navbar-element">
-
-            {/* <div>
-                <a href="">Browse</a>
-            </div> */}
             <div>
                 <a href="https://www.linkedin.com/in/joe-xiyang-lu-838459168/">LinkedIn</a>
             </div>
@@ -34,17 +30,13 @@ export const NavBar = ({currentUser, logout}) => {
             <div>
                 <a href="https://angel.co/u/joe-xiyang-lu">AngelList</a>
             </div>
-            {/* <div>
-                <a href="">About</a>
-            </div>
-            <div>
-                <a href="">Help</a>
-            </div> */}
             <div>
                 {display}
             </div>
             <div>
-                <a href="">Sell</a>
+                <a href="">
+                    <i className="fas fa-search"></i>
+                </a>
             </div>
 
         </div>

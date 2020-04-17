@@ -4,11 +4,8 @@ import { Link } from 'react-router-dom';
 const AccountDropdown = props => {
     return (
         <ul className="accountdrop-list">
-            <li>Buying</li>
-            <li>Selling</li>
-            <Link to={`/users/${props.currentUser.id}`}>Profile</Link>
-            <li>Following</li>
-            <li><button onClick={() => props.logout()}>Sign out</button></li>
+            <Link to={`/users/${props.currentUser.id}`} id="accountdrop-list-userprofile">Profile</Link>
+            <li><button onClick={() => props.logout()} id="accountdrop-list-session-btn">Sign out</button></li>
         </ul>
     )
 }
