@@ -1,8 +1,8 @@
 class Api::PurchaseditemsController < ApplicationController
-    # def index
-    #     @purchaseditems = User.find_by(id: params[:user_id]).purchaseditems
-    #     render :index
-    # end
+    def index
+        @purchaseditems = User.find_by(id: current_user.id).purchaseditems.order("created_at DESC")
+        render :index
+    end
 
     def show
         @purchaseditem = Purchaseditem.find_by(id: params[:id])
@@ -18,7 +18,6 @@ class Api::PurchaseditemsController < ApplicationController
         @purchaseditem.order_number = SecureRandom.random_number(10**10).to_s.rjust(10, '0')
         if @purchaseditem.save
             @user = @purchaseditem.user
-            # render "api/users/show"
             render :show
         else
             render json: @purchaseditem.errors.full_messages, status: 401

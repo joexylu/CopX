@@ -10,7 +10,7 @@ class SneakerShow extends React.Component{
         super(props)
         this.state={
             size: "All",
-            price: "---",
+            price: "",
             id: ""
         }
         this.handleClick = this.handleClick.bind(this)

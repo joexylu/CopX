@@ -1,16 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FollowingItems = props => {
+const FollowingItems = ({ sneaker, followSneaker, unFollowSneaker}) => {
+    let followButtonText = "Follow";
+    let followButtonAction = () => followSneaker(sneaker.id);
+    if (sneaker.followed_by_current_user) {
+        followButtonText = "Following";
+        followButtonAction = () => unFollowSneaker(sneaker.id);
+    }
     return(
-            <Link to={`/sneakers/${props.sneaker.id}`} className="user-follow-link">
+        <div>
+            <Link to={`/sneakers/${sneaker.id}`} className="user-follow-link">
                 <div className="user-follow-link-div">
-                    <img src={props.sneaker.photoUrl} className="user-follow-link-img"/>
+                    <img src={sneaker.photoUrl} className="user-follow-link-img"/>
                     <div className="user-follow-link-info">
-                        <h2>{props.sneaker.name}</h2>
+                        <h2>{sneaker.name}</h2>
                     </div>
                 </div>
             </Link>    
+            <button onClick={followButtonAction}>
+                {followButtonText}
+            </button>
+        </div>
     )
 }
 

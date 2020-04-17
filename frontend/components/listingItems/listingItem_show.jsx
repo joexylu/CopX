@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ItemPurchaseButton from "./purchase_listingitem";
 
 
 class ListingItemShow extends React.Component{
@@ -120,7 +121,8 @@ class ListingItemShow extends React.Component{
                 <div className="listing-show-footer">
                     <div className="listing-show-footer-btns">
                         <Link to={`/sneakers/${item.sneaker_id}`}className="listing-show-footer-btns-cancel">Cancel</Link>
-                        <a href="">Purcahse</a>
+                        {/* <a href="">Purcahse</a> */}
+                        <ItemPurchaseButton item={this.props.item} isCurrentUser={this.props.isCurrentUser} makePurchased={this.props.makePurchased}/>
                     </div>
                 </div>
             </div>

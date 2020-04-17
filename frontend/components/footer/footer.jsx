@@ -8,11 +8,11 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-part1">
                         <div className="footer-sub1-money-lang-usd">
-                            <span>United State</span>
+                            <span>US</span>
                             <span>|</span>
-                            <span>English (en)</span>
+                            <span>English(en)</span>
                             <span>|</span>
-                            <span>$ USD</span>
+                            <span>$USD</span>
                         </div>
                         <div className="footer-sub1-social">
                             <i className="fab fa-twitter fa-lg"></i>
