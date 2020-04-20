@@ -34,7 +34,7 @@ class SneakersIndex extends React.Component{
     render(){
 
         const sneaker = this.props.sneakers.map(sneaker => (
-            <SneakerIndexItem sneaker={sneaker}/>
+            <SneakerIndexItem key={sneaker.id} sneaker={sneaker}/>
         ))
         
         return(

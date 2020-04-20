@@ -14,6 +14,7 @@ class SneakerShow extends React.Component{
             id: ""
         }
         this.handleClick = this.handleClick.bind(this)
+        this.handleDrop=this.handleDrop.bind(this)
     }
 
     componentDidMount(){
@@ -34,12 +35,17 @@ class SneakerShow extends React.Component{
         )
     }
 
+    handleDrop(){
+        $('.show-items-dropdown-content').toggleClass('show');
+    }
+
     render(){
-        $(document).ready(function() {   
-            $('.show-listing-select-dropbtn').click(function(){
-                $('.show-items-dropdown-content').toggleClass('show');
-            });
-        });
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.show-listing-select-dropbtn') && !event.target.matches('.fa-angle-down')) {
+        //         $(".show-items-dropdown-content")[0].classList.remove('show');
+        //     }
+        // }
+
         const items = this.props.ListingItems
 
         return(
@@ -81,19 +87,7 @@ class SneakerShow extends React.Component{
                                         <a href="#"><i className="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
-                                {/* <button className="show-head-button">
-                                    <span>
-                                        <i className="fas fa-plus"></i>
-                                        PORTFOLIO
-                                    </span>
-                                </button> */}
                                 <SneakerFollowButton sneaker={this.props.sneaker} followSneaker={this.props.followSneaker} unFollowSneaker={this.props.unFollowSneaker} isCurrentUser={this.props.isCurrentUser}/>
-                                {/* <button className="show-head-button">
-                                    <span>
-                                        <i className="fas fa-plus"></i>
-                                        FOLLOW
-                                    </span> 
-                                </button> */}
                             </div>
                         </div>
 
@@ -121,8 +115,9 @@ class SneakerShow extends React.Component{
                                 <label>Size</label>
                                 {/* need a drop down here */}
                                 <div className="sneaker-show-body-head-listing-select">
-                                    <button className="show-listing-select-dropbtn">
-                                        <span>{this.state.size}</span>
+                                    <button onClick={this.handleDrop} className="show-listing-select-dropbtn">
+                                        {/* <span>{this.state.size}</span> */}
+                                        {this.state.size}
                                         <i className="fas fa-angle-down"></i>
                                     </button>
                                     <div id="show-items-Dropdown" className="show-items-dropdown-content">
@@ -130,7 +125,7 @@ class SneakerShow extends React.Component{
                                         <ul className="show-items-dropdown-list">
                                         {
                                             items && items.map(listItem => (
-                                                    <button onClick={this.handleClick} value={[listItem.id, listItem.size, listItem.price]} id="select-btn">
+                                                    <button onClick={this.handleClick} value={[listItem.id, listItem.size, listItem.price]} key={listItem.id} id="select-btn">
                                                         <h1>{listItem.size}</h1>
                                                         <h2>${listItem.price}</h2>
                                                     </button> 

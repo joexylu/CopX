@@ -644,11 +644,12 @@ var Homepage = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var sneaker = this.props.sneakers.map(function (sneaker, idx) {
+      var sneaker = this.props.sneakers.map(function (sneaker) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: sneaker.id,
           className: "homepage-sneakers"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sneaker_index_sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          key: idx,
+          key: sneaker.id,
           sneaker: sneaker
         }));
       });
@@ -1891,6 +1892,7 @@ var SneakersIndex = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var sneaker = this.props.sneakers.map(function (sneaker) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sneaker_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          key: sneaker.id,
           sneaker: sneaker
         });
       });
@@ -2102,6 +2104,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       id: ""
     };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    _this.handleDrop = _this.handleDrop.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -2124,15 +2127,20 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "handleDrop",
+    value: function handleDrop() {
+      $('.show-items-dropdown-content').toggleClass('show');
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      $(document).ready(function () {
-        $('.show-listing-select-dropbtn').click(function () {
-          $('.show-items-dropdown-content').toggleClass('show');
-        });
-      });
+      // window.onclick = function(event) {
+      //     if (!event.target.matches('.show-listing-select-dropbtn') && !event.target.matches('.fa-angle-down')) {
+      //         $(".show-items-dropdown-content")[0].classList.remove('show');
+      //     }
+      // }
       var items = this.props.ListingItems;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-page"
@@ -2216,8 +2224,9 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-body-head-listing-select"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleDrop,
         className: "show-listing-select-dropbtn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.state.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }, this.state.size, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-angle-down"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "show-items-Dropdown",
@@ -2228,6 +2237,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: _this2.handleClick,
           value: [listItem.id, listItem.size, listItem.price],
+          key: listItem.id,
           id: "select-btn"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, listItem.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "$", listItem.price));
       }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2574,6 +2584,7 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
           getAllFollowing = _this$props.getAllFollowing;
       var followingSneaker = followingSneakers.map(function (sneaker) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_user_follow_items__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          key: sneaker.id,
           sneaker: sneaker,
           unFollowSneaker: unFollowSneaker,
           followSneaker: followSneaker,
@@ -2582,6 +2593,7 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
       });
       var PurchasedSneaker = purchasedSneakers.map(function (purchasedItem) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_user_purchased_items__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          key: purchasedItem.id,
           purchasedItem: purchasedItem
         });
       });
@@ -3062,23 +3074,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 /* harmony import */ var _reducers_root_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/root_reducer */ "./frontend/reducers/root_reducer.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 
 
 
+ // const configureStore = (preloadedState = {}) =>
+//   createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger));
+// Production Store setting!
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], preloadedState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"], redux_logger__WEBPACK_IMPORTED_MODULE_1___default.a));
-}; // Production Store setting!
-// const configureStore = (preloadedState = {})=>{
-//   let middleware = [thunk];
-//   if (process.env.NODE_ENV !== 'production') {
-//     middleware = [...middleware, logger];
-//   }
-//   return createStore(rootReducer, preloadedState, applyMiddleware(...middleware));
-// };
+  var middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]];
 
+  if (true) {
+    middleware = [].concat(_toConsumableArray(middleware), [redux_logger__WEBPACK_IMPORTED_MODULE_1___default.a]);
+  }
+
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], preloadedState, redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"].apply(void 0, _toConsumableArray(middleware)));
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
