@@ -11,6 +11,7 @@ import listItemShowContainer from "./listingItems/listingItem_show_container"
 // import MoreComming from "./more_comming";
 import UserShowContainer from "./user_page/user_show_container";
 import PurchasedItemShowContainer from "./purchaseditems/purchaseditem_container";
+import SearchContainer from "./search/search_container";
 
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
       <Route exact path="/sneakers/:sneakerId" component={SneakerShowContainer} />
       {/* <Route exact path="/sneakers/:sneakerId/listingitems" component={listItemsIndexContainer} /> */}
       <Route exact path="/sneakers" component={SneakerIndexContainer}/>
+      <Route exact path="/search" component={SearchContainer} />
       <Route path="/" component={HomepageContainer}/>
       {/* <Route path="/" component={MoreComming}/> */}
   </Switch>

@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     delete '/follows', to: 'follows#destroy'
 
     resources :purchaseditems, only: [:index, :show, :create]
+
+    resources :search, only: [:show]
   end
 
   root to: 'static_pages#root'

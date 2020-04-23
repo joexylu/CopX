@@ -34,9 +34,9 @@ export const NavBar = ({currentUser, logout}) => {
                 {display}
             </div>
             <div>
-                <a href="">
+                <Link to="/search">
                     <i className="fas fa-search"></i>
-                </a>
+                </Link>
             </div>
 
         </div>

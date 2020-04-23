@@ -5,6 +5,7 @@ import sneakerReducer from "./sneaker_reducer";
 import listingItemReducer from "./listingitem_reducer";
 import purchasedItemReducer from "./purchaseditem_reducer";
 import followingItemReducer from "./followingitem_reducer";
+import searchReducer from "./search_reducer";
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -12,6 +13,7 @@ const entitiesReducer = combineReducers({
   listingItems: listingItemReducer,
   followingItem: followingItemReducer,
   purchasedItem: purchasedItemReducer,
+  search: searchReducer
 });
 
 export default entitiesReducer;
