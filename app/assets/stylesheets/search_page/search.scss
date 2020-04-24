@@ -1,0 +1,35 @@
+
+
+.search-body{
+    margin-top: 120px;
+    width: 600px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+#search-bar-indexshow{
+    width: 600px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 10px 12px 10px;
+}
+
+.search-body-back{
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+}
+
+#search-item-brand{
+    text-align: left;
+}

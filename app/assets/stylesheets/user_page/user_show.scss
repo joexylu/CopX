@@ -66,10 +66,12 @@
     justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
+    border-top: #dddddd 1px solid;
 }
 
 .user-following-items:hover{
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(251, 251, 251);
+    border-right: rgb(8, 160, 92) solid 5px;
 }
 
 .user-follow-link{
@@ -127,10 +129,12 @@
     font-size: 12px;
     color: #4a4a4a;
     text-decoration: none;
+    border-top: #dddddd 1px solid;
 }
 
 .user-ordered-items:hover{
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(251, 251, 251);
+    border-right: rgb(8, 160, 92) solid 5px;
 }
 
 .user-ordered-items-name{
