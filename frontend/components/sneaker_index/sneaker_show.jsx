@@ -14,13 +14,23 @@ class SneakerShow extends React.Component{
             id: ""
         }
         this.handleClick = this.handleClick.bind(this)
-        this.handleDrop=this.handleDrop.bind(this)
+        this.handleDrop = this.handleDrop.bind(this)
+        this.handleToBuy = this.handleToBuy.bind(this)
     }
 
     componentDidMount(){
         this.props.getListingItems(this.props.sneakerId)
         this.props.getSneaker(this.props.sneakerId)  
         window.scrollTo(0, 0)
+    }
+
+    handleToBuy(e){
+        e.preventDefault()
+        if (this.state.id === ""){
+            alert("Please Select A Size First")
+        } else{
+            this.props.history.push(`/listingitems/${this.state.id}`)
+        }
     }
 
     handleClick(e){
@@ -40,12 +50,6 @@ class SneakerShow extends React.Component{
     }
 
     render(){
-        // window.onclick = function(event) {
-        //     if (!event.target.matches('.show-listing-select-dropbtn') && !event.target.matches('.fa-angle-down')) {
-        //         $(".show-items-dropdown-content")[0].classList.remove('show');
-        //     }
-        // }
-
         const items = this.props.ListingItems
 
         return(
@@ -55,7 +59,6 @@ class SneakerShow extends React.Component{
                         <Link to="/" className="homepage-nav-bar-logo-link" id="logo-indexshow">
                             <img src={window.coplogoURL} id="sessionform-coplogo"/>
                         </Link>
-                        {/* <input type="text" placeholder="Search for brand, color, etc" id="search-bar-indexshow"/> */}
                     </div>
                     
                     <div className="homepage-nav-bar-links" id="index-show-page-navbar-contain">
@@ -148,11 +151,11 @@ class SneakerShow extends React.Component{
                                 <div className="show-lastsale-size">
                                     <h1>Size {this.state.size}</h1>
                                     <span>|</span>
-                                    <a href="">View All Sales</a>
+                                    <a>View All Sales</a>
                                 </div>
                             </div>
                             <div className="sneaker-show-body-head-buy">
-                                <Link to={`/listingitems/${this.state.id}`} className="sneaker-show-buy-btn">
+                                <button onClick={this.handleToBuy} className="sneaker-show-buy-btn">
                                     <div>
                                         <h1>${this.state.price}</h1>
                                         <span>Lowest Ask</span>
@@ -162,11 +165,11 @@ class SneakerShow extends React.Component{
                                         <h1>Buy</h1>
                                         <span>or Bid</span>
                                     </div>    
-                                </Link>
+                                </button>
                                 <div className="sneaker-show-body-head-buy-salesize">
                                     <h1>Size {this.state.size}</h1>
                                     <span></span>
-                                    <a href="">View All Asks</a>
+                                    <a>View All Asks</a>
                                 </div>
                             </div>
                         </div>

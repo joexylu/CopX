@@ -30,30 +30,30 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom">
                     <div className="footer-part2">
-                        <a href="">HELP</a>
+                        <a>HELP</a>
                         <span>|</span>
-                        <a href="">HOW IT WORKS</a>
+                        <a>HOW IT WORKS</a>
                         <span>|</span>
-                        <a href="">REVIEWS</a>
+                        <a>REVIEWS</a>
                         <span>|</span>
-                        <a href="">PRIVACY</a>
+                        <a>PRIVACY</a>
                         <span>|</span>
-                        <a href="">TERMS</a>
+                        <a>TERMS</a>
                         <span>|</span>
-                        <a href="">JOBS</a>
+                        <a>JOBS</a>
                         <span>|</span>
-                        <a href="">CONTACT</a>
+                        <a>CONTACT</a>
                         <span>|</span>
-                        <a href="">PRODUCT REQUEST</a>
+                        <a>PRODUCT REQUEST</a>
                         <span>|</span>
-                        <a href="">PRESS</a>
+                        <a>PRESS</a>
                     </div>
                     <div className="footer-part3">
                         <div className="footer-part3-lang">
-                            <a href="">IT</a>
-                            <a href="">DE</a>
-                            <a href="">FR</a>
-                            <a href="">ZH</a>
+                            <a>IT</a>
+                            <a>DE</a>
+                            <a>FR</a>
+                            <a>ZH</a>
                         </div>
                         <div className="footer-part3-right">
                             <i className="fas fa-at fa-sm"></i>

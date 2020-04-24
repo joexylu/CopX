@@ -24,7 +24,7 @@ class ListingItemShow extends React.Component{
                         </Link>
                     </div>
                     <div className="homepage-nav-bar-links" id="list-index-page-navbar-contain">
-                        <a href="">FAQ</a>
+                        <a>FAQ</a>
                     </div>
                 </div>
                 <div className="listing-show-body">
@@ -55,7 +55,7 @@ class ListingItemShow extends React.Component{
                         </div>
                         <div className="listing-rigtht-part2">
                             <div className="right-part-buybid-switch">
-                                <a href="">Place Bid</a>
+                                <a>Place Bid</a>
                                 <div>Buy Now</div>
                             </div>
                             <div className="right-part-price-amount">
@@ -66,9 +66,9 @@ class ListingItemShow extends React.Component{
                                 <span>You are about to purchase this product at the lowest Ask price</span>
                             </div>
                             <div className="right-part-affirm-promo">
-                                <a href="">Buy Now</a>
+                                <a>Buy Now</a>
                                 <span> as low as $49/mo with Affirm. </span>
-                                <a href=""> Prequalify now 
+                                <a> Prequalify now 
                                     <i className="far fa-question-circle"></i>
                                 </a>
                             </div>
@@ -101,7 +101,7 @@ class ListingItemShow extends React.Component{
                                     <i className="far fa-credit-card"></i>
                                     <span>Card ending in XXXX</span>
                                 </div>
-                                <a href="">
+                                <a>
                                     <i className="fas fa-pencil-alt"></i>
                                 </a>
                             </div>
@@ -110,7 +110,7 @@ class ListingItemShow extends React.Component{
                                     <i className="fas fa-home"></i>
                                     <span>XXXXXXXXXX</span>
                                 </div>
-                                <a href="">
+                                <a>
                                     <i className="fas fa-pencil-alt"></i>
                                 </a>
                             </div>

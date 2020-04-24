@@ -566,37 +566,11 @@ var Footer = function Footer() {
     className: "footer-bottom"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-part2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "HELP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "REVIEWS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "PRIVACY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "TERMS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "JOBS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "CONTACT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "PRODUCT REQUEST"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "PRESS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "HELP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "REVIEWS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "PRIVACY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "TERMS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "JOBS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "CONTACT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "PRODUCT REQUEST"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "PRESS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-part3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-part3-lang"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "IT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "DE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "FR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "ZH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "IT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "DE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "FR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "ZH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-part3-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-at fa-sm"
@@ -924,9 +898,7 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "homepage-nav-bar-links",
         id: "list-index-page-navbar-contain"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "FAQ"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "FAQ"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listing-show-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listing-left-part"
@@ -953,19 +925,13 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
         className: "listing-rigtht-part2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-buybid-switch"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "Place Bid"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Buy Now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Place Bid"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Buy Now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-price-amount"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-bid-warning"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "You are about to purchase this product at the lowest Ask price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-affirm-promo"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "Buy Now"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " as low as $49/mo with Affirm. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, " Prequalify now", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Buy Now"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " as low as $49/mo with Affirm. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, " Prequalify now", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-question-circle"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-order-summary"
@@ -989,9 +955,7 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
         className: "rigtht-part-payment-icon"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-credit-card"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Card ending in XXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Card ending in XXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-pencil-alt"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-part-address"
@@ -999,9 +963,7 @@ var ListingItemShow = /*#__PURE__*/function (_React$Component) {
         className: "rigtht-part-address-icon"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-home"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "XXXXXXXXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "XXXXXXXXXX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-pencil-alt"
       })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listing-show-footer"
@@ -2337,6 +2299,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
     };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.handleDrop = _this.handleDrop.bind(_assertThisInitialized(_this));
+    _this.handleToBuy = _this.handleToBuy.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -2346,6 +2309,17 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       this.props.getListingItems(this.props.sneakerId);
       this.props.getSneaker(this.props.sneakerId);
       window.scrollTo(0, 0);
+    }
+  }, {
+    key: "handleToBuy",
+    value: function handleToBuy(e) {
+      e.preventDefault();
+
+      if (this.state.id === "") {
+        alert("Please Select A Size First");
+      } else {
+        this.props.history.push("/listingitems/".concat(this.state.id));
+      }
     }
   }, {
     key: "handleClick",
@@ -2368,11 +2342,6 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      // window.onclick = function(event) {
-      //     if (!event.target.matches('.show-listing-select-dropbtn') && !event.target.matches('.fa-angle-down')) {
-      //         $(".show-items-dropdown-content")[0].classList.remove('show');
-      //     }
-      // }
       var items = this.props.ListingItems;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-page"
@@ -2482,20 +2451,16 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
         className: "fas fa-caret-up"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "+$--"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "(%---)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-lastsale-size"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Size ", this.state.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "View All Sales"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Size ", this.state.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "View All Sales"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-body-head-buy"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/listingitems/".concat(this.state.id),
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleToBuy,
         className: "sneaker-show-buy-btn"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "$", this.state.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Lowest Ask")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         id: "sneaker-show-buy-btn-divide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Buy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "or Bid"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-body-head-buy-salesize"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Size ", this.state.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "View All Asks"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Size ", this.state.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "View All Asks"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-body-img"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.sneaker.photoUrl
