@@ -22,7 +22,7 @@ The app utilizes Ruby on Rails as a back-end where PostgreSQL is used to store d
 ![logo](/image/splash.png)
 ### Login/SignUp
 Users can create an account and log in. User authentication for this web application was made using the BCrypt gem and SecureRandom module.
-![logo](/image/user-auth.png)
+![user-auth](/image/user-auth.png)
 ```
 def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
@@ -50,7 +50,7 @@ def self.find_by_credentials(email, password)
 end
 ```
 ### Sneaker Index Page
-![logo](/image/sneaker-index.png)
+![sneaker-index](/image/sneaker-index.png)
 Customized the filter at backend to filter out different brands:
 ```
 def index
@@ -64,11 +64,19 @@ end
 ```
 ### Sneaker Show Page
 User can select sizes to checkout the sneaker and follow the this sneaker
-![logo](/image/sneaker-show.png)
+![sneaker-show](/image/sneaker-show.png)
 ### User's Profile
 Users can see their following sneakers and order history
-![logo](/image/user-show.png)
+![user-show](/image/user-show.png)
+### Sneaker Search
+User can search sneaksers by names
+![search-page](/image/search-page.png)
+```
+def show
+    @results = Sneaker.where("LOWER(name) LIKE ?", "%#{params[:id]}%")
+    render :show
+end
+```
 
 ## Future Plans
-* Search Sneakers
 * Sneaker Selling and bidding
